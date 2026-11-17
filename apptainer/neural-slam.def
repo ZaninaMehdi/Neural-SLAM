@@ -1,0 +1,79 @@
+Bootstrap: docker
+From: ubuntu:18.04
+
+# Active Neural SLAM environment for Alliance clusters (Nibi H100).
+# - Python 3.8 (conda env, inside the image only)
+# - PyTorch 2.4.1 + CUDA 11.8 runtime (pip wheel bundles CUDA; supports sm_90 / H100)
+# - habitat-sim @ 9575dcd (headless/EGL) and habitat-api @ b5f2b00, as pinned upstream
+# Build (on a compute node, in $SLURM_TMPDIR):  see apptainer/build.sbatch
+
+%environment
+    export LANG=C.UTF-8 LC_ALL=C.UTF-8
+    export PATH=/opt/conda/envs/ans/bin:/opt/conda/bin:$PATH
+    export MPLBACKEND=Agg
+    unset PYTHONPATH
+
+%post
+    set -eux
+    export DEBIAN_FRONTEND=noninteractive LANG=C.UTF-8 LC_ALL=C.UTF-8
+    NJOBS=$(nproc)
+
+    apt-get update
+    apt-get install -y --no-install-recommends \
+        build-essential git wget curl ca-certificates pkg-config \
+        libjpeg-dev libpng-dev libglm-dev \
+        libgl1-mesa-dev libegl1-mesa-dev libgles2-mesa-dev xorg-dev freeglut3-dev \
+        libglvnd0 libgl1 libglx0 libegl1 libgles2 \
+        libglib2.0-0 libsm6 libxext6 libxrender1 ffmpeg
+    rm -rf /var/lib/apt/lists/*
+
+    # NVIDIA EGL vendor file: apptainer --nv binds libEGL_nvidia.so.0 at runtime
+    mkdir -p /usr/share/glvnd/egl_vendor.d
+    echo '{"file_format_version":"1.0.0","ICD":{"library_path":"libEGL_nvidia.so.0"}}' \
+        > /usr/share/glvnd/egl_vendor.d/10_nvidia.json
+
+    # Miniforge (conda-forge only, no Anaconda ToS channels)
+    wget -q https://github.com/conda-forge/miniforge/releases/download/24.11.3-2/Miniforge3-24.11.3-2-Linux-x86_64.sh -O /tmp/mf.sh
+    bash /tmp/mf.sh -b -p /opt/conda && rm /tmp/mf.sh
+    /opt/conda/bin/conda create -y -n ans python=3.8
+    /opt/conda/bin/conda clean -afy
+    export PATH=/opt/conda/envs/ans/bin:/opt/conda/bin:$PATH
+    unset PYTHONPATH PIP_CONFIG_FILE PIP_INDEX_URL PIP_FIND_LINKS PIP_NO_INDEX
+    export PIP_NO_CACHE_DIR=1
+
+    pip install --upgrade "pip<24.1" "setuptools<60" wheel
+    pip install "cmake==3.18.4.post1" "numpy==1.23.5" "numpy-quaternion==2022.4.3" "numba==0.58.1" "attrs==23.2.0"
+
+    # PyTorch with CUDA 11.8 (H100-capable)
+    pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cu118
+
+    # habitat-sim at the commit pinned by Neural-SLAM
+    git clone https://github.com/facebookresearch/habitat-sim.git /opt/habitat-sim
+    cd /opt/habitat-sim
+    git checkout 9575dcd45fe6f55d2a44043833af08972a7895a9
+    git submodule update --init --recursive
+    # requirements.txt may pin numpy etc.; keep our numpy
+    grep -v -i '^numpy' requirements.txt > /tmp/hsim_req.txt || true
+    pip install -r /tmp/hsim_req.txt
+    export CMAKE_BUILD_PARALLEL_LEVEL=$NJOBS MAKEFLAGS=-j$NJOBS
+    python setup.py install --headless
+    cd /
+
+    # habitat-api at the commit pinned by Neural-SLAM
+    git clone https://github.com/facebookresearch/habitat-lab.git /opt/habitat-api
+    cd /opt/habitat-api
+    git checkout b5f2b00a25627ecb52b43b13ea96b05998d9a121
+    grep -v -i -E '^(numpy|opencv-python)' requirements.txt > /tmp/hapi_req.txt || true
+    pip install -r /tmp/hapi_req.txt "opencv-python-headless==4.1.2.30"
+    pip install -e .
+    cd /
+
+    # Neural-SLAM python requirements (loosened to versions with py3.8 wheels)
+    pip install matplotlib==3.5.3 tensorboard seaborn==0.11.2 imageio==2.6.0 \
+        scikit-fmm==2022.8.15 scikit-image==0.19.3 scikit-learn==1.1.3 \
+        "numpy==1.23.5" "gym==0.10.9"
+
+    python -c "import torch, habitat_sim, habitat; print('torch', torch.__version__)"
+
+%test
+    python -c "import torch, habitat_sim, habitat, skfmm, skimage; print('ok', torch.__version__)"

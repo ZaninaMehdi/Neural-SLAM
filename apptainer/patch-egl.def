@@ -1,0 +1,16 @@
+Bootstrap: localimage
+From: neural-slam.sif
+
+# Layer on top of neural-slam.sif: the pinned habitat-sim aborts if /dev/nvidia<EGL index> is
+# not readable. On Slurm nodes the job's GPU is some other /dev/nvidiaN, so turn that into a warning.
+%post
+    set -eux
+    export PATH=/opt/conda/envs/ans/bin:/opt/conda/bin:$PATH
+    unset PYTHONPATH
+    f=/opt/habitat-sim/src/esp/gfx/WindowlessContext.cpp
+    sed -i 's/CHECK(isNvidiaGpuReadable(eglDevId))/LOG_IF(WARNING, !isNvidiaGpuReadable(eglDevId))/' $f
+    grep -n "isNvidiaGpuReadable(eglDevId)" $f
+    cd /opt/habitat-sim
+    export CMAKE_BUILD_PARALLEL_LEVEL=$(nproc) MAKEFLAGS=-j$(nproc)
+    python setup.py install --headless
+    cd / && python -c "import habitat_sim, habitat; print('ok')"

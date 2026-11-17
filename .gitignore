@@ -134,3 +134,7 @@ dmypy.json
 /data/
 
 /pretrained_models/
+# apptainer image
+*.sif
+logs/
+/tmp/
