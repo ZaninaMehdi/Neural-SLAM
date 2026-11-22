@@ -29,6 +29,7 @@ from env.habitat.utils.noisy_actions import CustomActionSpaceConfiguration
 import env.habitat.utils.pose as pu
 import env.habitat.utils.visualizations as vu
 from env.habitat.utils.supervision import HabitatMaps
+from env.habitat.utils.dynamic_objects import DynamicObjects, rasterize
 
 from model import get_grid
 
@@ -98,6 +99,20 @@ class Exploration_Env(habitat.RLEnv):
                                       interpolation = Image.NEAREST)])
         self.scene_name = None
         self.maps_dict = {}
+
+        # Phantom dynamic obstacles (see env/habitat/utils/dynamic_objects.py)
+        self.dyn = DynamicObjects(args, rank)
+        self.dyn_rel = []
+        self.dyn_last_step = self._empty_dyn_stats()
+
+    @staticmethod
+    def _empty_dyn_stats():
+        # contact: agent overlaps an object after its move this step
+        # event:   contact onset (no contact on the previous step)
+        # blocked: the move was undone because of the contact (--dyn_block 1)
+        # yields:  number of objects that waited because they would have
+        #          walked into the agent
+        return {'contact': 0, 'event': 0, 'blocked': 0, 'yields': 0}
 
     def randomize_env(self):
         self._env._episode_iterator._shuffle_iterator()
@@ -178,6 +193,13 @@ class Exploration_Env(habitat.RLEnv):
         self.collison_map = np.zeros(self.map.shape)
         self.col_width = 1
 
+        # Dynamic objects for the new episode
+        self.dyn.reset(self._env.sim._sim.pathfinder,
+                       self._env.sim.get_agent_state().position,
+                       self.scene_name,
+                       self._env.current_episode.episode_id)
+        self.dyn_rel = self.dyn.relative_positions(self.last_sim_location)
+
         # Set info
         self.info = {
             'time': self.timestep,
@@ -185,7 +207,12 @@ class Exploration_Env(habitat.RLEnv):
             'fp_explored': fp_explored,
             'sensor_pose': [0., 0., 0.],
             'pose_err': [0., 0., 0.],
+            'dyn_rel': self.dyn_rel,
+            # VectorEnv auto-reset replaces the last step's info with this
+            # one, so carry the previous episode's final-step stats over
+            'dyn_step': self.dyn_last_step,
         }
+        self.dyn_last_step = self._empty_dyn_stats()
 
         self.save_position()
 
@@ -211,10 +238,34 @@ class Exploration_Env(habitat.RLEnv):
         self.last_loc_gt = np.copy(self.curr_loc_gt)
         self._previous_action = action
 
+        # Dynamic objects move first; they wait rather than walk into the agent
+        pre_state = self._env.sim.get_agent_state()
+        dyn_stats = self._empty_dyn_stats()
+        dyn_stats['yields'] = self.dyn.step_objects(pre_state.position)
+
         if args.noisy_actions:
             obs, rew, done, info = super().step(noisy_action)
         else:
             obs, rew, done, info = super().step(action)
+
+        # Agent-caused contact with a dynamic object
+        if self.dyn.enabled:
+            post_pos = self._env.sim.get_agent_state().position
+            contact = self.dyn.in_contact(post_pos)
+            dyn_stats['contact'] = int(contact)
+            dyn_stats['event'] = int(contact and not self.dyn.prev_contact)
+            self.dyn.prev_contact = contact
+            if contact and args.dyn_block:
+                # Undo the move like a wall would: put the agent back and
+                # re-render from there, before odometry / mapping below
+                back_obs = self._env.sim.get_observations_at(
+                    pre_state.position, pre_state.rotation,
+                    keep_agent_at_new_pose=True)
+                if back_obs is not None:
+                    obs = back_obs
+                    dyn_stats['blocked'] = 1
+                    # prev_contact stays True: repeated blocked attempts on
+                    # consecutive steps count as one event, several steps
 
         # Preprocess observations
         rgb = obs['rgb'].astype(np.uint8)
@@ -288,6 +339,13 @@ class Exploration_Env(habitat.RLEnv):
         self.info['pose_err'] = [dx_gt - dx_base,
                                  dy_gt - dy_base,
                                  do_gt - do_base]
+
+        # Dynamic objects relative to the agent's true pose (last_sim_location
+        # was updated to the current pose by get_gt_pose_change above)
+        self.dyn_rel = self.dyn.relative_positions(self.last_sim_location)
+        self.info['dyn_rel'] = self.dyn_rel
+        self.info['dyn_step'] = dyn_stats
+        self.dyn_last_step = dyn_stats
 
 
         if self.timestep%args.num_local_steps==0:
@@ -421,6 +479,15 @@ class Exploration_Env(habitat.RLEnv):
         gx1, gx2, gy1, gy2 = int(gx1), int(gx2), int(gy1), int(gy2)
         planning_window = [gx1, gx2, gy1, gy2]
 
+        # Dynamic objects drawn at their current offset from the agent's
+        # estimated pose; a fresh matrix every call (never stored in the map)
+        if self.dyn.enabled:
+            dyn_local = rasterize(self.dyn_rel, (start_x, start_y, start_o),
+                                  grid.shape, (gx1, gy1),
+                                  args.map_resolution, args.dyn_radius)
+        else:
+            dyn_local = None
+
         # Get last loc
         last_start_x, last_start_y = self.last_loc[0], self.last_loc[1]
         r, c = last_start_y, last_start_x
@@ -479,7 +546,8 @@ class Exploration_Env(habitat.RLEnv):
         self.intrinsic_rew = -exp_pred[goal[0], goal[1]]
 
         # Get short-term goal
-        stg = self._get_stg(grid, explored, start, np.copy(goal), planning_window)
+        stg = self._get_stg(grid, explored, start, np.copy(goal),
+                            planning_window, dyn=dyn_local)
 
         # Find GT action
         if self.args.eval or not self.args.train_local:
@@ -545,7 +613,8 @@ class Exploration_Env(habitat.RLEnv):
                                 self.explored_map[gx1:gx2, gy1:gy2],
                                 self.explorable_map[gx1:gx2, gy1:gy2],
                                 self.map[gx1:gx2, gy1:gy2] *
-                                    self.explored_map[gx1:gx2, gy1:gy2])
+                                    self.explored_map[gx1:gx2, gy1:gy2],
+                                dyn=dyn_local)
                 vis_grid = np.flipud(vis_grid)
                 vu.visualize(self.figure, self.ax, self.obs, vis_grid[:,:,::-1],
                             (start_x - gy1*args.map_resolution/100.0,
@@ -655,7 +724,8 @@ class Exploration_Env(habitat.RLEnv):
         return episode_map
 
 
-    def _get_stg(self, grid, explored, start, goal, planning_window):
+    def _get_stg(self, grid, explored, start, goal, planning_window,
+                 dyn=None):
 
         [gx1, gx2, gy1, gy2] = planning_window
 
@@ -695,6 +765,12 @@ class Exploration_Env(habitat.RLEnv):
                         self.selem) != True
         traversible[self.collison_map[gx1:gx2, gy1:gy2][x1:x2, y1:y2] == 1] = 0
         traversible[self.visited[gx1:gx2, gy1:gy2][x1:x2, y1:y2] == 1] = 1
+
+        # Dynamic objects block cells even where the agent has walked before
+        # (the line above forces visited cells to be traversible)
+        if dyn is not None:
+            traversible[skimage.morphology.binary_dilation(
+                            dyn[x1:x2, y1:y2], self.selem)] = 0
 
         traversible[int(start[0]-x1)-1:int(start[0]-x1)+2,
                     int(start[1]-y1)-1:int(start[1]-y1)+2] = 1

@@ -93,7 +93,7 @@ def fill_color(colored, mat, color):
 
 
 def get_colored_map(mat, collision_map, visited, visited_gt, goal,
-                    explored, gt_map, gt_map_explored):
+                    explored, gt_map, gt_map_explored, dyn=None):
     m, n = mat.shape
     colored = np.zeros((m, n, 3))
     pal = sns.color_palette("Paired")
@@ -119,6 +119,9 @@ def get_colored_map(mat, collision_map, visited, visited_gt, goal,
     colored = fill_color(colored, visited * visited_gt, pal[5])
 
     colored = fill_color(colored, collision_map, pal[2])
+
+    if dyn is not None:  # phantom dynamic objects, orange
+        colored = fill_color(colored, dyn, pal[7])
 
     current_palette = sns.color_palette()
 

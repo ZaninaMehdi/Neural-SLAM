@@ -15,6 +15,7 @@ from arguments import get_args
 from env import make_vec_envs
 from utils.storage import GlobalRolloutStorage, FIFOMemory
 from utils.optimization import get_optimizer
+from env.habitat.utils.dynamic_objects import rasterize
 from model import RL_Policy, Local_IL_Policy, Neural_SLAM_Module
 
 import algo
@@ -102,6 +103,14 @@ def main():
         explored_area_log = np.zeros((num_scenes, num_episodes, traj_lengths))
         explored_ratio_log = np.zeros((num_scenes, num_episodes, traj_lengths))
 
+    # Dynamic-object contact stats per episode:
+    # [contact events, contact steps, blocked steps, object yields]
+    use_dyn = args.dyn_mode != "none"
+    dyn_ep = np.zeros((num_scenes, 4))
+    dyn_episode_totals = deque(maxlen=1000)
+    if args.eval and use_dyn:
+        dyn_log = np.zeros((num_scenes, num_episodes, 4))
+
     g_episode_rewards = deque(maxlen=1000)
 
     l_action_losses = deque(maxlen=1000)
@@ -152,6 +161,26 @@ def main():
     ### 1-3 store continuous global agent location
     ### 4-7 store local map boundaries
     planner_pose_inputs = np.zeros((num_scenes, 7))
+
+    def overlay_dyn(infos, est_poses):
+        # Max dynamic objects into the global policy input only (a copy of
+        # local_map / full_map); the persistent maps are never touched.
+        if not use_dyn:
+            return
+        for e in range(num_scenes):
+            rel = infos[e]['dyn_rel']
+            if not rel:
+                continue
+            dyn_l = rasterize(rel, est_poses[e], (local_w, local_h),
+                              (lmb[e, 0], lmb[e, 2]),
+                              args.map_resolution, args.dyn_radius)
+            dyn_f = rasterize(rel, est_poses[e], (local_w, local_h), (0, 0),
+                              args.map_resolution, args.dyn_radius,
+                              scale=args.global_downscaling)
+            global_input[e, 0] = torch.max(global_input[e, 0],
+                                           torch.from_numpy(dyn_l))
+            global_input[e, 4] = torch.max(global_input[e, 4],
+                                           torch.from_numpy(dyn_f))
 
     def init_map_and_pose():
         full_map.fill_(0.)
@@ -287,6 +316,7 @@ def main():
 
     global_input[:, 0:4, :, :] = local_map.detach()
     global_input[:, 4:, :, :] = nn.MaxPool2d(args.global_downscaling)(full_map)
+    overlay_dyn(infos, locs + origins)
 
     g_rollouts.obs[0].copy_(global_input)
     g_rollouts.extras[0].copy_(global_orientation)
@@ -364,6 +394,18 @@ def main():
             l_masks = torch.FloatTensor([0 if x else 1
                                          for x in done]).to(device)
             g_masks *= l_masks
+
+            if use_dyn:
+                for e in range(num_scenes):
+                    s = infos[e]['dyn_step']
+                    dyn_ep[e] += [s['event'], s['contact'], s['blocked'],
+                                  s['yields']]
+                if step == args.max_episode_length - 1:
+                    if args.eval:
+                        dyn_log[:, ep_num] = dyn_ep
+                    for e in range(num_scenes):
+                        dyn_episode_totals.append(dyn_ep[e].copy())
+                    dyn_ep.fill(0.)
             # ------------------------------------------------------------------
 
             # ------------------------------------------------------------------
@@ -450,6 +492,7 @@ def main():
                 global_input[:, 0:4, :, :] = local_map
                 global_input[:, 4:, :, :] = \
                     nn.MaxPool2d(args.global_downscaling)(full_map)
+                overlay_dyn(infos, full_pose.cpu().numpy())
 
                 if False:
                     for i in range(4):
@@ -655,6 +698,13 @@ def main():
                             np.max(g_episode_rewards))
                     ])
 
+                if use_dyn and len(dyn_episode_totals) > 0:
+                    d = np.mean(dyn_episode_totals, axis=0)
+                    log += " ".join([
+                        "\n\tDyn objects per eps events/contact/blocked/yield:",
+                        "{:.2f}/{:.2f}/{:.2f}/{:.2f},".format(*d)
+                    ])
+
                 log += "\n\tLosses:"
 
                 if args.train_local and len(l_action_losses) > 0:
@@ -760,6 +810,25 @@ def main():
         for i in range(explored_ratio_log.shape[2]):
             log += "{:.5f}, ".format(
                 np.mean(explored_ratio_log[:, :, i]))
+
+        if use_dyn:
+            with open("{}/dyn_collisions.txt".format(dump_dir), "w+") as f:
+                f.write("# process episode events contact_steps "
+                        "blocked_steps object_yields\n")
+                for e in range(num_scenes):
+                    for i in range(num_episodes):
+                        f.write("{} {} {:d} {:d} {:d} {:d}\n".format(
+                            e, i, *dyn_log[e, i].astype(int)))
+            flat = dyn_log.reshape(-1, 4)
+            log += "\nDyn objects ({}, n={}, block={}, fov_only={}):".format(
+                args.dyn_mode, args.num_dyn_obj, args.dyn_block,
+                args.dyn_fov_only)
+            log += "\n  contact events/eps: {:.3f}".format(flat[:, 0].mean())
+            log += "\n  contact steps/eps:  {:.3f}".format(flat[:, 1].mean())
+            log += "\n  blocked steps/eps:  {:.3f}".format(flat[:, 2].mean())
+            log += "\n  object yields/eps:  {:.3f}".format(flat[:, 3].mean())
+            log += "\n  collision-free eps: {:.1f}%".format(
+                100. * (flat[:, 0] == 0).mean())
 
         print(log)
         logging.info(log)

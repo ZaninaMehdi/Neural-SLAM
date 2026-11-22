@@ -163,6 +163,39 @@ def get_args():
     parser.add_argument('-ct', '--collision_threshold', type=float, default=0.20)
     parser.add_argument('-nl', '--noise_level', type=float, default=1.0)
 
+    # Phantom dynamic obstacles (oracle perception, not rendered),
+    # see env/habitat/utils/dynamic_objects.py
+    parser.add_argument('--dyn_mode', type=str, default="none",
+                        choices=["none", "known", "random"],
+                        help="""none: off (original ANS);
+                                known: fixed per-episode waypoint loops
+                                (seeded by scene+episode, cached as JSON);
+                                random: random-waypoint walk""")
+    parser.add_argument('--num_dyn_obj', type=int, default=3,
+                        help="number of dynamic objects per episode")
+    parser.add_argument('--dyn_speed', type=float, default=0.1,
+                        help="object speed in metres per env step "
+                             "(agent forward step is 0.25)")
+    parser.add_argument('--dyn_radius', type=float, default=0.25,
+                        help="object radius in metres")
+    parser.add_argument('--dyn_agent_radius', type=float, default=0.1,
+                        help="agent radius in metres for contact checks "
+                             "(habitat AGENT_0.RADIUS)")
+    parser.add_argument('--dyn_block', type=int, default=0,
+                        help="""0: count contacts only (agent passes through);
+                                1: count and undo the agent's move""")
+    parser.add_argument('--dyn_fov_only', type=int, default=0,
+                        help="""1: overlay only objects within vision range
+                                and field of view (no occlusion check);
+                                0: overlay all objects (full oracle)""")
+    parser.add_argument('--dyn_num_waypoints', type=int, default=4,
+                        help="waypoints per object loop in known mode")
+    parser.add_argument('--dyn_min_start_dist', type=float, default=1.5,
+                        help="min distance (m) of object start from agent")
+    parser.add_argument('--dyn_traj_dir', type=str,
+                        default="~/scratch/ans_runs/dyn_trajectories",
+                        help="cache for known-mode trajectories")
+
     # parse arguments
     args = parser.parse_args()
     args.cuda = not args.no_cuda and torch.cuda.is_available()
