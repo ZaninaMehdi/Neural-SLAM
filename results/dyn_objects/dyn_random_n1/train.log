@@ -1,0 +1,2841 @@
+INFO:root:Namespace(alpha=0.99, auto_gpu_config=0, camera_height=1.25, clip_param=0.2, collision_threshold=0.2, cuda=True, du_scale=2, dump_location='/home/yichenwu/scratch/ans_runs', dyn_agent_radius=0.1, dyn_block=1, dyn_fov_only=0, dyn_min_start_dist=1.5, dyn_mode='random', dyn_num_waypoints=4, dyn_radius=0.25, dyn_speed=0.1, dyn_traj_dir='~/scratch/ans_runs/dyn_trajectories', entropy_coef=0.001, env_frame_height=256, env_frame_width=256, eps=1e-05, eval=1, exp_loss_coeff=1.0, exp_name='dyn_random_n1', frame_height=128, frame_width=128, gamma=0.99, global_downscaling=2, global_hidden_size=256, global_lr=2.5e-05, goals_size=2, hfov=90.0, load_global='pretrained_models/model_best.global', load_local='pretrained_models/model_best.local', load_slam='pretrained_models/model_best.slam', local_hidden_size=512, local_optimizer='adam,lr=0.0001', local_policy_update_freq=5, log_interval=100, map_pred_threshold=0.5, map_resolution=5, map_size_cm=2400, max_episode_length=1000, max_grad_norm=0.5, no_cuda=False, noise_level=1.0, noisy_actions=1, noisy_odometry=1, num_dyn_obj=1, num_episodes=71, num_global_steps=40, num_local_steps=25, num_mini_batch=7, num_processes=14, num_processes_on_first_gpu=0, num_processes_per_gpu=11, obs_threshold=1, obstacle_boundary=5, pose_loss_coeff=10000.0, ppo_epoch=4, pretrained_resnet=1, print_images=0, proj_loss_coeff=1.0, randomize_env_every=1000, save_interval=1, save_periodic=500000, save_trajectory_data='0', seed=1, short_goal_dist=1, sim_gpu_id=0, slam_batch_size=72, slam_iterations=10, slam_memory_size=500000, slam_optimizer='adam,lr=0.0001', split='val_mt', task_config='tasks/pointnav_gibson.yaml', tau=0.95, total_num_scenes='auto', train_global=0, train_local=0, train_slam=0, use_deterministic_local=0, use_gae=False, use_pose_estimation=2, use_recurrent_global=0, use_recurrent_local=1, value_loss_coef=0.5, vis_type=1, vision_range=64, visualize=0)
+INFO:root:Time: 00d 00h 00m 00s, num timesteps 0, FPS 0,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 05s, num timesteps 1400, FPS 238,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 11s, num timesteps 2800, FPS 247,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 16s, num timesteps 4200, FPS 247,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 22s, num timesteps 5600, FPS 247,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 28s, num timesteps 7000, FPS 246,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 34s, num timesteps 8400, FPS 245,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 39s, num timesteps 9800, FPS 245,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 45s, num timesteps 11200, FPS 246,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 00m 51s, num timesteps 12600, FPS 246,
+	Rewards:
+	Losses:
+INFO:root:Time: 00d 00h 01m 04s, num timesteps 14000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7964/0.4240,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 09s, num timesteps 15400, FPS 222,
+	Rewards: Global step mean/med rew: 1.1292/0.4833,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 14s, num timesteps 16800, FPS 224,
+	Rewards: Global step mean/med rew: 1.1558/0.5370,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 20s, num timesteps 18200, FPS 225,
+	Rewards: Global step mean/med rew: 1.1341/0.5370,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 26s, num timesteps 19600, FPS 226,
+	Rewards: Global step mean/med rew: 1.0913/0.5370,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 32s, num timesteps 21000, FPS 227,
+	Rewards: Global step mean/med rew: 1.0409/0.4985,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 38s, num timesteps 22400, FPS 228,
+	Rewards: Global step mean/med rew: 1.0015/0.4829,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 43s, num timesteps 23800, FPS 229,
+	Rewards: Global step mean/med rew: 0.9476/0.4484,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 49s, num timesteps 25200, FPS 229,
+	Rewards: Global step mean/med rew: 0.8958/0.4418,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 01m 55s, num timesteps 26600, FPS 230,
+	Rewards: Global step mean/med rew: 0.8500/0.4122,  Global eps mean/med/min/max eps rew: 31.854/25.003/16.668/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 12.29/115.36/115.36/180.21,
+	Losses:
+INFO:root:Time: 00d 00h 02m 08s, num timesteps 28000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8080/0.4004,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 13s, num timesteps 29400, FPS 219,
+	Rewards: Global step mean/med rew: 0.9832/0.4122,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 19s, num timesteps 30800, FPS 221,
+	Rewards: Global step mean/med rew: 1.0001/0.4418,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 24s, num timesteps 32200, FPS 222,
+	Rewards: Global step mean/med rew: 1.0108/0.4442,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 30s, num timesteps 33600, FPS 223,
+	Rewards: Global step mean/med rew: 0.9879/0.4442,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 36s, num timesteps 35000, FPS 224,
+	Rewards: Global step mean/med rew: 0.9531/0.4293,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 41s, num timesteps 36400, FPS 224,
+	Rewards: Global step mean/med rew: 0.9215/0.4122,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 47s, num timesteps 37800, FPS 225,
+	Rewards: Global step mean/med rew: 0.8882/0.4004,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 53s, num timesteps 39200, FPS 226,
+	Rewards: Global step mean/med rew: 0.8584/0.3629,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 02m 58s, num timesteps 40600, FPS 227,
+	Rewards: Global step mean/med rew: 0.8306/0.3238,  Global eps mean/med/min/max eps rew: 32.318/25.565/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 8.11/82.39/82.39/127.54,
+	Losses:
+INFO:root:Time: 00d 00h 03m 11s, num timesteps 42000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8079/0.3050,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 16s, num timesteps 43400, FPS 220,
+	Rewards: Global step mean/med rew: 0.9073/0.3370,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 22s, num timesteps 44800, FPS 221,
+	Rewards: Global step mean/med rew: 0.9354/0.3651,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 28s, num timesteps 46200, FPS 221,
+	Rewards: Global step mean/med rew: 0.9339/0.4004,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 34s, num timesteps 47600, FPS 222,
+	Rewards: Global step mean/med rew: 0.9123/0.3651,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 40s, num timesteps 49000, FPS 222,
+	Rewards: Global step mean/med rew: 0.8926/0.3395,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 45s, num timesteps 50400, FPS 223,
+	Rewards: Global step mean/med rew: 0.8693/0.3238,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 51s, num timesteps 51800, FPS 223,
+	Rewards: Global step mean/med rew: 0.8526/0.3163,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 03m 57s, num timesteps 53200, FPS 224,
+	Rewards: Global step mean/med rew: 0.8368/0.3050,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 04m 03s, num timesteps 54600, FPS 224,
+	Rewards: Global step mean/med rew: 0.8205/0.2989,  Global eps mean/med/min/max eps rew: 32.316/25.807/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.29/67.50/67.50/102.71,
+	Losses:
+INFO:root:Time: 00d 00h 04m 15s, num timesteps 56000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8028/0.2786,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 04m 21s, num timesteps 57400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8946/0.3005,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 04m 27s, num timesteps 58800, FPS 220,
+	Rewards: Global step mean/med rew: 0.9009/0.3163,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 04m 32s, num timesteps 60200, FPS 220,
+	Rewards: Global step mean/med rew: 0.8982/0.3313,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 04m 38s, num timesteps 61600, FPS 221,
+	Rewards: Global step mean/med rew: 0.8840/0.3238,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 04m 44s, num timesteps 63000, FPS 221,
+	Rewards: Global step mean/med rew: 0.8750/0.3313,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 04m 50s, num timesteps 64400, FPS 221,
+	Rewards: Global step mean/med rew: 0.8611/0.3207,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 04m 56s, num timesteps 65800, FPS 222,
+	Rewards: Global step mean/med rew: 0.8489/0.3207,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 05m 01s, num timesteps 67200, FPS 222,
+	Rewards: Global step mean/med rew: 0.8318/0.3066,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 05m 07s, num timesteps 68600, FPS 222,
+	Rewards: Global step mean/med rew: 0.8155/0.2989,  Global eps mean/med/min/max eps rew: 32.111/25.835/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.12/68.39/68.39/107.30,
+	Losses:
+INFO:root:Time: 00d 00h 05m 20s, num timesteps 70000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8011/0.2736,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 05m 25s, num timesteps 71400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8700/0.2989,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 05m 31s, num timesteps 72800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8928/0.3066,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 05m 37s, num timesteps 74200, FPS 220,
+	Rewards: Global step mean/med rew: 0.8832/0.3154,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 05m 42s, num timesteps 75600, FPS 220,
+	Rewards: Global step mean/med rew: 0.8769/0.3207,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 05m 48s, num timesteps 77000, FPS 220,
+	Rewards: Global step mean/med rew: 0.8624/0.3066,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 05m 54s, num timesteps 78400, FPS 221,
+	Rewards: Global step mean/med rew: 0.8499/0.3005,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 06m 00s, num timesteps 79800, FPS 221,
+	Rewards: Global step mean/med rew: 0.8386/0.2989,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 06m 06s, num timesteps 81200, FPS 221,
+	Rewards: Global step mean/med rew: 0.8258/0.2736,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 06m 12s, num timesteps 82600, FPS 221,
+	Rewards: Global step mean/med rew: 0.8122/0.2544,  Global eps mean/med/min/max eps rew: 32.045/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.71/77.51/77.51/112.97,
+	Losses:
+INFO:root:Time: 00d 00h 06m 25s, num timesteps 84000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7993/0.2455,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 06m 30s, num timesteps 85400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8464/0.2544,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 06m 36s, num timesteps 86800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8588/0.2736,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 06m 42s, num timesteps 88200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8542/0.2987,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 06m 47s, num timesteps 89600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8585/0.3005,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 06m 53s, num timesteps 91000, FPS 220,
+	Rewards: Global step mean/med rew: 0.8487/0.2989,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 06m 59s, num timesteps 92400, FPS 220,
+	Rewards: Global step mean/med rew: 0.8383/0.2987,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 07m 05s, num timesteps 93800, FPS 220,
+	Rewards: Global step mean/med rew: 0.8267/0.2736,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 07m 11s, num timesteps 95200, FPS 220,
+	Rewards: Global step mean/med rew: 0.8149/0.2544,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 07m 17s, num timesteps 96600, FPS 221,
+	Rewards: Global step mean/med rew: 0.8036/0.2455,  Global eps mean/med/min/max eps rew: 31.972/25.839/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.81/77.81/118.73,
+	Losses:
+INFO:root:Time: 00d 00h 07m 29s, num timesteps 98000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7922/0.2361,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 07m 35s, num timesteps 99400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8409/0.2455,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 07m 41s, num timesteps 100800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8566/0.2544,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 07m 46s, num timesteps 102200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8520/0.2736,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 07m 52s, num timesteps 103600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8445/0.2713,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 07m 58s, num timesteps 105000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8373/0.2713,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 08m 04s, num timesteps 106400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8283/0.2571,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 08m 10s, num timesteps 107800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8216/0.2571,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 08m 15s, num timesteps 109200, FPS 220,
+	Rewards: Global step mean/med rew: 0.8215/0.2640,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 08m 21s, num timesteps 110600, FPS 220,
+	Rewards: Global step mean/med rew: 0.8122/0.2532,  Global eps mean/med/min/max eps rew: 31.686/25.851/16.293/72.018,
+	Dyn objects per eps events/contact/blocked/yield: 6.11/89.99/89.99/133.09,
+	Losses:
+INFO:root:Time: 00d 00h 08m 34s, num timesteps 112000, FPS 217,
+	Rewards: Global step mean/med rew: 0.8036/0.2497,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 08m 40s, num timesteps 113400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8510/0.2571,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 08m 45s, num timesteps 114800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8517/0.2713,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 08m 51s, num timesteps 116200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8546/0.2774,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 08m 56s, num timesteps 117600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8475/0.2750,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 09m 02s, num timesteps 119000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8414/0.2750,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 09m 08s, num timesteps 120400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8359/0.2750,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 09m 14s, num timesteps 121800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8335/0.2879,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 09m 20s, num timesteps 123200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8255/0.2750,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 09m 25s, num timesteps 124600, FPS 220,
+	Rewards: Global step mean/med rew: 0.8172/0.2640,  Global eps mean/med/min/max eps rew: 32.145/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/85.71/85.71/132.65,
+	Losses:
+INFO:root:Time: 00d 00h 09m 38s, num timesteps 126000, FPS 217,
+	Rewards: Global step mean/med rew: 0.8091/0.2566,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 09m 44s, num timesteps 127400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8434/0.2640,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 09m 49s, num timesteps 128800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8580/0.2750,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 09m 55s, num timesteps 130200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8576/0.2774,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 10m 01s, num timesteps 131600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8520/0.2750,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 10m 06s, num timesteps 133000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8461/0.2774,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 10m 12s, num timesteps 134400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8390/0.2713,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 10m 18s, num timesteps 135800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8309/0.2578,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 10m 23s, num timesteps 137200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8228/0.2535,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 10m 29s, num timesteps 138600, FPS 220,
+	Rewards: Global step mean/med rew: 0.8145/0.2499,  Global eps mean/med/min/max eps rew: 32.366/25.851/16.140/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.35/84.35/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 10m 42s, num timesteps 140000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8074/0.2491,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 10m 47s, num timesteps 141400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8393/0.2508,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 10m 53s, num timesteps 142800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8474/0.2566,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 10m 58s, num timesteps 144200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8480/0.2640,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 11m 04s, num timesteps 145600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8433/0.2713,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 11m 10s, num timesteps 147000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8371/0.2660,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 11m 16s, num timesteps 148400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8300/0.2578,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 11m 21s, num timesteps 149800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8245/0.2566,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 11m 27s, num timesteps 151200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8191/0.2535,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 11m 33s, num timesteps 152600, FPS 220,
+	Rewards: Global step mean/med rew: 0.8130/0.2499,  Global eps mean/med/min/max eps rew: 32.296/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.01/80.81/80.81/133.51,
+	Losses:
+INFO:root:Time: 00d 00h 11m 46s, num timesteps 154000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8067/0.2491,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 11m 51s, num timesteps 155400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8360/0.2508,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 11m 57s, num timesteps 156800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8373/0.2566,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 02s, num timesteps 158200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8376/0.2602,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 08s, num timesteps 159600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8335/0.2660,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 14s, num timesteps 161000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8272/0.2578,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 20s, num timesteps 162400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8217/0.2566,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 25s, num timesteps 163800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8163/0.2535,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 31s, num timesteps 165200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8118/0.2535,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 37s, num timesteps 166600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8053/0.2502,  Global eps mean/med/min/max eps rew: 32.266/25.851/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.31/81.60/81.60/135.36,
+	Losses:
+INFO:root:Time: 00d 00h 12m 49s, num timesteps 168000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7986/0.2491,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 12m 55s, num timesteps 169400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8284/0.2502,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 01s, num timesteps 170800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8334/0.2535,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 06s, num timesteps 172200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8346/0.2578,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 12s, num timesteps 173600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8296/0.2535,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 17s, num timesteps 175000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8252/0.2535,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 23s, num timesteps 176400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8195/0.2502,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 29s, num timesteps 177800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8145/0.2496,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 35s, num timesteps 179200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8083/0.2489,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 41s, num timesteps 180600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8028/0.2488,  Global eps mean/med/min/max eps rew: 31.946/25.845/13.398/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.18/80.68/80.68/132.29,
+	Losses:
+INFO:root:Time: 00d 00h 13m 53s, num timesteps 182000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7966/0.2462,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 13m 59s, num timesteps 183400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8253/0.2488,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 04s, num timesteps 184800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8301/0.2491,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 10s, num timesteps 186200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8273/0.2496,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 16s, num timesteps 187600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8243/0.2502,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 22s, num timesteps 189000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8201/0.2508,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 27s, num timesteps 190400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8164/0.2535,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 33s, num timesteps 191800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8119/0.2508,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 39s, num timesteps 193200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8060/0.2496,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 45s, num timesteps 194600, FPS 219,
+	Rewards: Global step mean/med rew: 0.8006/0.2489,  Global eps mean/med/min/max eps rew: 31.864/25.845/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.93/77.69/77.69/126.34,
+	Losses:
+INFO:root:Time: 00d 00h 14m 58s, num timesteps 196000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7949/0.2478,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 03s, num timesteps 197400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8201/0.2489,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 09s, num timesteps 198800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8242/0.2496,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 15s, num timesteps 200200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8223/0.2502,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 21s, num timesteps 201600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8194/0.2508,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 26s, num timesteps 203000, FPS 219,
+	Rewards: Global step mean/med rew: 0.8162/0.2535,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 32s, num timesteps 204400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8123/0.2535,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 38s, num timesteps 205800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8079/0.2508,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 44s, num timesteps 207200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8031/0.2496,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 15m 49s, num timesteps 208600, FPS 219,
+	Rewards: Global step mean/med rew: 0.7981/0.2489,  Global eps mean/med/min/max eps rew: 31.796/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.90/81.08/81.08/129.06,
+	Losses:
+INFO:root:Time: 00d 00h 16m 02s, num timesteps 210000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7928/0.2478,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 08s, num timesteps 211400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8193/0.2489,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 13s, num timesteps 212800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8248/0.2496,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 19s, num timesteps 214200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8251/0.2508,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 25s, num timesteps 215600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8227/0.2566,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 31s, num timesteps 217000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8181/0.2535,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 37s, num timesteps 218400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8138/0.2508,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 42s, num timesteps 219800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8090/0.2496,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 48s, num timesteps 221200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8045/0.2489,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 16m 54s, num timesteps 222600, FPS 219,
+	Rewards: Global step mean/med rew: 0.7998/0.2478,  Global eps mean/med/min/max eps rew: 31.713/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 6.00/84.48/84.48/133.63,
+	Losses:
+INFO:root:Time: 00d 00h 17m 07s, num timesteps 224000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7948/0.2438,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 12s, num timesteps 225400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8150/0.2478,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 18s, num timesteps 226800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8196/0.2489,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 24s, num timesteps 228200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8208/0.2496,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 29s, num timesteps 229600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8181/0.2502,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 35s, num timesteps 231000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8147/0.2502,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 41s, num timesteps 232400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8114/0.2508,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 47s, num timesteps 233800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8070/0.2496,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 53s, num timesteps 235200, FPS 219,
+	Rewards: Global step mean/med rew: 0.8028/0.2491,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 17m 59s, num timesteps 236600, FPS 219,
+	Rewards: Global step mean/med rew: 0.7981/0.2488,  Global eps mean/med/min/max eps rew: 31.791/25.836/13.045/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.86/85.16/85.16/132.76,
+	Losses:
+INFO:root:Time: 00d 00h 18m 11s, num timesteps 238000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7934/0.2462,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 17s, num timesteps 239400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8125/0.2488,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 22s, num timesteps 240800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8162/0.2491,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 28s, num timesteps 242200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8144/0.2502,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 33s, num timesteps 243600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8119/0.2508,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 39s, num timesteps 245000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8093/0.2535,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 45s, num timesteps 246400, FPS 219,
+	Rewards: Global step mean/med rew: 0.8076/0.2535,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 50s, num timesteps 247800, FPS 219,
+	Rewards: Global step mean/med rew: 0.8032/0.2502,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 18m 56s, num timesteps 249200, FPS 219,
+	Rewards: Global step mean/med rew: 0.7989/0.2491,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 19m 02s, num timesteps 250600, FPS 219,
+	Rewards: Global step mean/med rew: 0.7954/0.2491,  Global eps mean/med/min/max eps rew: 31.735/25.830/7.845/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.96/86.59/86.59/134.07,
+	Losses:
+INFO:root:Time: 00d 00h 19m 15s, num timesteps 252000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7910/0.2488,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 19m 21s, num timesteps 253400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8116/0.2491,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 19m 26s, num timesteps 254800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8156/0.2502,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 19m 32s, num timesteps 256200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8136/0.2508,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 19m 38s, num timesteps 257600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8110/0.2502,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 19m 44s, num timesteps 259000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8085/0.2502,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 19m 49s, num timesteps 260400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8046/0.2491,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 19m 55s, num timesteps 261800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8016/0.2489,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 20m 01s, num timesteps 263200, FPS 219,
+	Rewards: Global step mean/med rew: 0.7982/0.2488,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 20m 07s, num timesteps 264600, FPS 219,
+	Rewards: Global step mean/med rew: 0.7949/0.2478,  Global eps mean/med/min/max eps rew: 31.639/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.92/88.81/88.81/135.41,
+	Losses:
+INFO:root:Time: 00d 00h 20m 20s, num timesteps 266000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7908/0.2438,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 20m 25s, num timesteps 267400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8104/0.2478,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 20m 31s, num timesteps 268800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8162/0.2489,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 20m 37s, num timesteps 270200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8151/0.2496,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 20m 42s, num timesteps 271600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8130/0.2502,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 20m 48s, num timesteps 273000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8092/0.2491,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 20m 54s, num timesteps 274400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8066/0.2491,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 21m 00s, num timesteps 275800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8034/0.2489,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 21m 05s, num timesteps 277200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7997/0.2478,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 21m 11s, num timesteps 278600, FPS 219,
+	Rewards: Global step mean/med rew: 0.7960/0.2438,  Global eps mean/med/min/max eps rew: 31.632/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.85/89.98/89.98/135.33,
+	Losses:
+INFO:root:Time: 00d 00h 21m 24s, num timesteps 280000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7924/0.2417,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 21m 29s, num timesteps 281400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8084/0.2438,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 21m 35s, num timesteps 282800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8118/0.2478,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 21m 40s, num timesteps 284200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8109/0.2488,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 21m 46s, num timesteps 285600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8077/0.2478,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 21m 52s, num timesteps 287000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8052/0.2488,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 21m 58s, num timesteps 288400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8037/0.2489,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 22m 04s, num timesteps 289800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8013/0.2491,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 22m 09s, num timesteps 291200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7976/0.2488,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 22m 15s, num timesteps 292600, FPS 219,
+	Rewards: Global step mean/med rew: 0.7939/0.2462,  Global eps mean/med/min/max eps rew: 31.696/25.836/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.80/90.68/90.68/134.92,
+	Losses:
+INFO:root:Time: 00d 00h 22m 28s, num timesteps 294000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7907/0.2438,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 22m 34s, num timesteps 295400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8087/0.2478,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 22m 39s, num timesteps 296800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8102/0.2489,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 22m 45s, num timesteps 298200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8088/0.2496,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 22m 51s, num timesteps 299600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8079/0.2508,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 22m 57s, num timesteps 301000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8060/0.2522,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 23m 03s, num timesteps 302400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8031/0.2508,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 23m 08s, num timesteps 303800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8016/0.2522,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 23m 14s, num timesteps 305200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7983/0.2502,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 23m 20s, num timesteps 306600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7947/0.2491,  Global eps mean/med/min/max eps rew: 31.627/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/93.06/93.06/136.56,
+	Losses:
+INFO:root:Time: 00d 00h 23m 33s, num timesteps 308000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7911/0.2488,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 23m 38s, num timesteps 309400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8063/0.2491,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 23m 44s, num timesteps 310800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8090/0.2502,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 23m 50s, num timesteps 312200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8077/0.2502,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 23m 55s, num timesteps 313600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8068/0.2522,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 24m 01s, num timesteps 315000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8041/0.2508,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 24m 07s, num timesteps 316400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8010/0.2496,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 24m 13s, num timesteps 317800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7987/0.2502,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 24m 18s, num timesteps 319200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7952/0.2491,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 24m 24s, num timesteps 320600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7921/0.2489,  Global eps mean/med/min/max eps rew: 31.646/25.830/6.795/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.76/97.23/97.23/140.67,
+	Losses:
+INFO:root:Time: 00d 00h 24m 37s, num timesteps 322000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7890/0.2478,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 24m 42s, num timesteps 323400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8040/0.2489,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 24m 48s, num timesteps 324800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8060/0.2492,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 24m 53s, num timesteps 326200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8056/0.2502,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 24m 59s, num timesteps 327600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8029/0.2496,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 25m 05s, num timesteps 329000, FPS 218,
+	Rewards: Global step mean/med rew: 0.8004/0.2492,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 25m 11s, num timesteps 330400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7978/0.2490,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 25m 17s, num timesteps 331800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7954/0.2492,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 25m 23s, num timesteps 333200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7931/0.2490,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 25m 29s, num timesteps 334600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7900/0.2488,  Global eps mean/med/min/max eps rew: 31.559/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.63/94.71/94.71/136.98,
+	Losses:
+INFO:root:Time: 00d 00h 25m 41s, num timesteps 336000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7867/0.2462,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 25m 47s, num timesteps 337400, FPS 218,
+	Rewards: Global step mean/med rew: 0.8004/0.2488,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 25m 53s, num timesteps 338800, FPS 218,
+	Rewards: Global step mean/med rew: 0.8038/0.2490,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 25m 58s, num timesteps 340200, FPS 218,
+	Rewards: Global step mean/med rew: 0.8037/0.2490,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 26m 04s, num timesteps 341600, FPS 218,
+	Rewards: Global step mean/med rew: 0.8017/0.2490,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 26m 10s, num timesteps 343000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7996/0.2490,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 26m 16s, num timesteps 344400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7974/0.2490,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 26m 21s, num timesteps 345800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7944/0.2488,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 26m 27s, num timesteps 347200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7916/0.2462,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 26m 33s, num timesteps 348600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7888/0.2422,  Global eps mean/med/min/max eps rew: 31.470/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.68/96.02/96.02/138.57,
+	Losses:
+INFO:root:Time: 00d 00h 26m 46s, num timesteps 350000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7857/0.2414,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 26m 51s, num timesteps 351400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7862/0.2414,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 26m 57s, num timesteps 352800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7845/0.2414,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 02s, num timesteps 354200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7849/0.2414,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 08s, num timesteps 355600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7837/0.2389,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 14s, num timesteps 357000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7840/0.2401,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 20s, num timesteps 358400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7831/0.2401,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 26s, num timesteps 359800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7831/0.2401,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 32s, num timesteps 361200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7825/0.2389,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 37s, num timesteps 362600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7820/0.2389,  Global eps mean/med/min/max eps rew: 31.427/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/95.68/95.68/137.44,
+	Losses:
+INFO:root:Time: 00d 00h 27m 50s, num timesteps 364000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7825/0.2389,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 27m 56s, num timesteps 365400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7801/0.2389,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 01s, num timesteps 366800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7827/0.2389,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 07s, num timesteps 368200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7819/0.2401,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 13s, num timesteps 369600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7806/0.2388,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 18s, num timesteps 371000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7806/0.2387,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 24s, num timesteps 372400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7795/0.2326,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 30s, num timesteps 373800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7796/0.2326,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 36s, num timesteps 375200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7807/0.2366,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 42s, num timesteps 376600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7811/0.2387,  Global eps mean/med/min/max eps rew: 31.322/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.65/95.29/95.29/139.26,
+	Losses:
+INFO:root:Time: 00d 00h 28m 54s, num timesteps 378000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7812/0.2387,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 00s, num timesteps 379400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7794/0.2387,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 05s, num timesteps 380800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7790/0.2387,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 11s, num timesteps 382200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7768/0.2378,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 17s, num timesteps 383600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7768/0.2358,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 22s, num timesteps 385000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7781/0.2387,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 28s, num timesteps 386400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7784/0.2388,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 34s, num timesteps 387800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7795/0.2401,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 40s, num timesteps 389200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7806/0.2422,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 46s, num timesteps 390600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7805/0.2422,  Global eps mean/med/min/max eps rew: 31.328/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.66/96.60/96.60/140.16,
+	Losses:
+INFO:root:Time: 00d 00h 29m 58s, num timesteps 392000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7803/0.2422,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 04s, num timesteps 393400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7803/0.2422,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 09s, num timesteps 394800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7773/0.2422,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 15s, num timesteps 396200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7787/0.2422,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 21s, num timesteps 397600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7804/0.2476,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 27s, num timesteps 399000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7805/0.2484,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 32s, num timesteps 400400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7814/0.2487,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 38s, num timesteps 401800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7806/0.2462,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 44s, num timesteps 403200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7799/0.2420,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 30m 50s, num timesteps 404600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7791/0.2414,  Global eps mean/med/min/max eps rew: 31.332/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.62/96.29/96.29/139.39,
+	Losses:
+INFO:root:Time: 00d 00h 31m 03s, num timesteps 406000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7795/0.2420,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 08s, num timesteps 407400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7764/0.2420,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 14s, num timesteps 408800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7804/0.2420,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 20s, num timesteps 410200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7810/0.2420,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 25s, num timesteps 411600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7811/0.2414,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 31s, num timesteps 413000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7801/0.2401,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 37s, num timesteps 414400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7797/0.2389,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 43s, num timesteps 415800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7786/0.2388,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 48s, num timesteps 417200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7787/0.2388,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 31m 54s, num timesteps 418600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7787/0.2388,  Global eps mean/med/min/max eps rew: 31.307/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.60/97.64/97.64/140.52,
+	Losses:
+INFO:root:Time: 00d 00h 32m 06s, num timesteps 420000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7784/0.2388,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 12s, num timesteps 421400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7774/0.2388,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 18s, num timesteps 422800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7757/0.2388,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 23s, num timesteps 424200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7783/0.2389,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 29s, num timesteps 425600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7783/0.2389,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 35s, num timesteps 427000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7794/0.2420,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 41s, num timesteps 428400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7799/0.2438,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 47s, num timesteps 429800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7808/0.2476,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 52s, num timesteps 431200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7811/0.2484,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 32m 58s, num timesteps 432600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7812/0.2484,  Global eps mean/med/min/max eps rew: 31.288/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.58/96.37/96.37/139.11,
+	Losses:
+INFO:root:Time: 00d 00h 33m 11s, num timesteps 434000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7811/0.2484,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 16s, num timesteps 435400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7831/0.2484,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 22s, num timesteps 436800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7833/0.2484,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 27s, num timesteps 438200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7843/0.2484,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 33s, num timesteps 439600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7815/0.2484,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 39s, num timesteps 441000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7838/0.2490,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 45s, num timesteps 442400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7843/0.2490,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 50s, num timesteps 443800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7845/0.2492,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 33m 56s, num timesteps 445200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7846/0.2492,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 34m 02s, num timesteps 446600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7844/0.2492,  Global eps mean/med/min/max eps rew: 31.386/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/96.01/96.01/138.16,
+	Losses:
+INFO:root:Time: 00d 00h 34m 14s, num timesteps 448000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7844/0.2492,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 34m 20s, num timesteps 449400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7831/0.2492,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 34m 26s, num timesteps 450800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7812/0.2492,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 34m 31s, num timesteps 452200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7819/0.2492,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 34m 37s, num timesteps 453600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7829/0.2492,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 34m 43s, num timesteps 455000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7819/0.2488,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 34m 49s, num timesteps 456400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7820/0.2490,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 34m 55s, num timesteps 457800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7814/0.2488,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 35m 01s, num timesteps 459200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7782/0.2476,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 35m 07s, num timesteps 460600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7779/0.2476,  Global eps mean/med/min/max eps rew: 31.445/25.828/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/94.57/94.57/137.40,
+	Losses:
+INFO:root:Time: 00d 00h 35m 19s, num timesteps 462000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7774/0.2462,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 35m 25s, num timesteps 463400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7733/0.2462,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 35m 31s, num timesteps 464800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7753/0.2462,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 35m 36s, num timesteps 466200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7734/0.2438,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 35m 42s, num timesteps 467600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7741/0.2476,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 35m 48s, num timesteps 469000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7743/0.2476,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 35m 54s, num timesteps 470400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7738/0.2445,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 35m 59s, num timesteps 471800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7715/0.2389,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 36m 05s, num timesteps 473200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7711/0.2388,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 36m 11s, num timesteps 474600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7709/0.2388,  Global eps mean/med/min/max eps rew: 31.349/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.56/97.65/97.65/140.65,
+	Losses:
+INFO:root:Time: 00d 00h 36m 23s, num timesteps 476000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7712/0.2389,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 36m 29s, num timesteps 477400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7725/0.2389,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 36m 34s, num timesteps 478800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7695/0.2389,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 36m 40s, num timesteps 480200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7695/0.2403,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 36m 46s, num timesteps 481600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7696/0.2420,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 36m 51s, num timesteps 483000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7694/0.2387,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 36m 57s, num timesteps 484400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7710/0.2420,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 37m 03s, num timesteps 485800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7716/0.2429,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 37m 09s, num timesteps 487200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7716/0.2429,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 37m 15s, num timesteps 488600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7717/0.2429,  Global eps mean/med/min/max eps rew: 31.251/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.50/96.54/96.54/139.03,
+	Losses:
+INFO:root:Time: 00d 00h 37m 27s, num timesteps 490000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7716/0.2420,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 37m 33s, num timesteps 491400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7707/0.2420,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 37m 39s, num timesteps 492800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7692/0.2420,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 37m 44s, num timesteps 494200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7687/0.2420,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 37m 50s, num timesteps 495600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7692/0.2420,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 37m 56s, num timesteps 497000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7704/0.2420,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 38m 01s, num timesteps 498400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7701/0.2420,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 38m 07s, num timesteps 499800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7698/0.2429,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 38m 13s, num timesteps 501200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7693/0.2403,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 38m 18s, num timesteps 502600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7688/0.2403,  Global eps mean/med/min/max eps rew: 31.272/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.48/95.98/95.98/138.11,
+	Losses:
+INFO:root:Time: 00d 00h 38m 31s, num timesteps 504000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7684/0.2388,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 38m 37s, num timesteps 505400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7676/0.2388,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 38m 42s, num timesteps 506800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7708/0.2388,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 38m 48s, num timesteps 508200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7696/0.2387,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 38m 54s, num timesteps 509600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7697/0.2387,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 39m 00s, num timesteps 511000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7715/0.2429,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 39m 05s, num timesteps 512400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7722/0.2445,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 39m 11s, num timesteps 513800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7731/0.2485,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 39m 17s, num timesteps 515200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7724/0.2468,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 39m 23s, num timesteps 516600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7724/0.2468,  Global eps mean/med/min/max eps rew: 31.202/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/95.16/95.16/136.94,
+	Losses:
+INFO:root:Time: 00d 00h 39m 36s, num timesteps 518000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7726/0.2468,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 39m 41s, num timesteps 519400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7702/0.2468,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 39m 47s, num timesteps 520800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7699/0.2468,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 39m 53s, num timesteps 522200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7697/0.2468,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 39m 58s, num timesteps 523600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7737/0.2530,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 40m 04s, num timesteps 525000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2530,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 40m 10s, num timesteps 526400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7752/0.2563,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 40m 15s, num timesteps 527800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7746/0.2553,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 40m 21s, num timesteps 529200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7749/0.2563,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 40m 27s, num timesteps 530600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7748/0.2553,  Global eps mean/med/min/max eps rew: 31.241/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.43/94.64/94.64/136.02,
+	Losses:
+INFO:root:Time: 00d 00h 40m 40s, num timesteps 532000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7750/0.2553,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 40m 45s, num timesteps 533400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7717/0.2553,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 40m 51s, num timesteps 534800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7731/0.2553,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 40m 56s, num timesteps 536200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2563,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 41m 02s, num timesteps 537600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2585,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 41m 08s, num timesteps 539000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7753/0.2585,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 41m 14s, num timesteps 540400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7744/0.2543,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 41m 20s, num timesteps 541800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7739/0.2535,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 41m 25s, num timesteps 543200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2535,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 41m 31s, num timesteps 544600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7738/0.2535,  Global eps mean/med/min/max eps rew: 31.294/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.42/94.03/94.03/135.08,
+	Losses:
+INFO:root:Time: 00d 00h 41m 44s, num timesteps 546000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7739/0.2535,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 41m 49s, num timesteps 547400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7741/0.2535,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 41m 55s, num timesteps 548800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7752/0.2535,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 00s, num timesteps 550200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7746/0.2535,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 06s, num timesteps 551600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7749/0.2530,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 12s, num timesteps 553000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7742/0.2492,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 18s, num timesteps 554400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2510,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 23s, num timesteps 555800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2492,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 29s, num timesteps 557200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7742/0.2510,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 35s, num timesteps 558600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7741/0.2510,  Global eps mean/med/min/max eps rew: 31.258/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.37/93.34/93.34/133.85,
+	Losses:
+INFO:root:Time: 00d 00h 42m 48s, num timesteps 560000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7750/0.2535,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 42m 53s, num timesteps 561400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7738/0.2535,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 42m 59s, num timesteps 562800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7732/0.2535,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 04s, num timesteps 564200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2535,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 10s, num timesteps 565600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7732/0.2510,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 16s, num timesteps 567000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7735/0.2510,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 21s, num timesteps 568400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7739/0.2510,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 27s, num timesteps 569800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7746/0.2530,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 33s, num timesteps 571200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7742/0.2530,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 39s, num timesteps 572600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2530,  Global eps mean/med/min/max eps rew: 31.268/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/91.93/91.93/131.94,
+	Losses:
+INFO:root:Time: 00d 00h 43m 51s, num timesteps 574000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2530,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 43m 57s, num timesteps 575400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7764/0.2530,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 03s, num timesteps 576800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7743/0.2530,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 08s, num timesteps 578200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7726/0.2510,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 14s, num timesteps 579600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7723/0.2492,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 20s, num timesteps 581000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7729/0.2530,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 26s, num timesteps 582400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7725/0.2492,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 32s, num timesteps 583800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7726/0.2492,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 38s, num timesteps 585200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7737/0.2535,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 43s, num timesteps 586600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2553,  Global eps mean/med/min/max eps rew: 31.285/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/90.72/90.72/130.51,
+	Losses:
+INFO:root:Time: 00d 00h 44m 56s, num timesteps 588000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7748/0.2553,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 01s, num timesteps 589400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7763/0.2553,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 07s, num timesteps 590800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7777/0.2553,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 13s, num timesteps 592200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7789/0.2553,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 18s, num timesteps 593600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7793/0.2563,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 24s, num timesteps 595000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7785/0.2543,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 30s, num timesteps 596400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7769/0.2530,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 36s, num timesteps 597800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7770/0.2530,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 42s, num timesteps 599200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7772/0.2535,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 45m 48s, num timesteps 600600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7766/0.2510,  Global eps mean/med/min/max eps rew: 31.294/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/91.56/91.56/131.54,
+	Losses:
+INFO:root:Time: 00d 00h 46m 00s, num timesteps 602000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7766/0.2510,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 06s, num timesteps 603400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7784/0.2510,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 11s, num timesteps 604800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7797/0.2510,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 17s, num timesteps 606200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7787/0.2492,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 23s, num timesteps 607600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7793/0.2543,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 29s, num timesteps 609000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7783/0.2510,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 34s, num timesteps 610400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7788/0.2531,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 40s, num timesteps 611800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7784/0.2531,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 46s, num timesteps 613200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7782/0.2510,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 46m 52s, num timesteps 614600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7780/0.2510,  Global eps mean/med/min/max eps rew: 31.304/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.32/92.06/92.06/131.82,
+	Losses:
+INFO:root:Time: 00d 00h 47m 04s, num timesteps 616000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7789/0.2543,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 10s, num timesteps 617400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7769/0.2543,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 15s, num timesteps 618800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7759/0.2543,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 21s, num timesteps 620200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7755/0.2531,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 27s, num timesteps 621600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2489,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 33s, num timesteps 623000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7757/0.2510,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 39s, num timesteps 624400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7750/0.2489,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 44s, num timesteps 625800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7754/0.2489,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 50s, num timesteps 627200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7772/0.2531,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 47m 56s, num timesteps 628600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7772/0.2531,  Global eps mean/med/min/max eps rew: 31.362/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/91.61/91.61/131.01,
+	Losses:
+INFO:root:Time: 00d 00h 48m 09s, num timesteps 630000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7775/0.2543,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 14s, num timesteps 631400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7782/0.2543,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 20s, num timesteps 632800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7773/0.2543,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 26s, num timesteps 634200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7775/0.2553,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 32s, num timesteps 635600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7787/0.2578,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 38s, num timesteps 637000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7779/0.2543,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 43s, num timesteps 638400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7759/0.2492,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 49s, num timesteps 639800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7752/0.2461,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 48m 55s, num timesteps 641200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7758/0.2485,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 49m 01s, num timesteps 642600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7759/0.2485,  Global eps mean/med/min/max eps rew: 31.365/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.30/93.33/93.33/132.99,
+	Losses:
+INFO:root:Time: 00d 00h 49m 14s, num timesteps 644000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7754/0.2461,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 19s, num timesteps 645400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7710/0.2461,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 25s, num timesteps 646800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7713/0.2461,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 30s, num timesteps 648200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7735/0.2461,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 36s, num timesteps 649600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7736/0.2431,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 42s, num timesteps 651000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7727/0.2403,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 48s, num timesteps 652400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7746/0.2438,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 53s, num timesteps 653800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7732/0.2403,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 49m 59s, num timesteps 655200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7730/0.2403,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 50m 05s, num timesteps 656600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7730/0.2403,  Global eps mean/med/min/max eps rew: 31.296/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.43/93.43/132.69,
+	Losses:
+INFO:root:Time: 00d 00h 50m 17s, num timesteps 658000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7731/0.2403,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 50m 23s, num timesteps 659400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7722/0.2403,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 50m 28s, num timesteps 660800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7741/0.2403,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 50m 34s, num timesteps 662200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7751/0.2431,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 50m 40s, num timesteps 663600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7741/0.2421,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 50m 46s, num timesteps 665000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7750/0.2438,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 50m 51s, num timesteps 666400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7751/0.2461,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 50m 57s, num timesteps 667800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2431,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 51m 03s, num timesteps 669200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2431,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 51m 09s, num timesteps 670600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7743/0.2408,  Global eps mean/med/min/max eps rew: 31.263/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/93.42/93.42/132.50,
+	Losses:
+INFO:root:Time: 00d 00h 51m 21s, num timesteps 672000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7741/0.2408,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 51m 27s, num timesteps 673400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7710/0.2408,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 51m 32s, num timesteps 674800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7733/0.2408,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 51m 38s, num timesteps 676200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7742/0.2408,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 51m 44s, num timesteps 677600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7750/0.2431,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 51m 50s, num timesteps 679000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7753/0.2461,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 51m 55s, num timesteps 680400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7753/0.2461,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 52m 01s, num timesteps 681800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7750/0.2431,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 52m 07s, num timesteps 683200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7742/0.2408,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 52m 13s, num timesteps 684600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2408,  Global eps mean/med/min/max eps rew: 31.249/25.826/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.44/92.44/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 52m 25s, num timesteps 686000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7740/0.2408,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 52m 31s, num timesteps 687400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7764/0.2408,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 52m 36s, num timesteps 688800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7761/0.2408,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 52m 42s, num timesteps 690200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7760/0.2438,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 52m 47s, num timesteps 691600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7758/0.2461,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 52m 53s, num timesteps 693000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7757/0.2438,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 52m 59s, num timesteps 694400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7751/0.2408,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 53m 05s, num timesteps 695800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7753/0.2408,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 53m 10s, num timesteps 697200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7749/0.2408,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 53m 16s, num timesteps 698600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2408,  Global eps mean/med/min/max eps rew: 31.209/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.22/92.68/92.68/131.90,
+	Losses:
+INFO:root:Time: 00d 00h 53m 29s, num timesteps 700000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7746/0.2408,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 53m 34s, num timesteps 701400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7744/0.2408,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 53m 40s, num timesteps 702800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7760/0.2408,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 53m 46s, num timesteps 704200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7762/0.2408,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 53m 51s, num timesteps 705600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7789/0.2485,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 53m 57s, num timesteps 707000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7778/0.2431,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 54m 03s, num timesteps 708400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7774/0.2379,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 54m 09s, num timesteps 709800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7769/0.2363,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 54m 15s, num timesteps 711200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7768/0.2344,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 54m 21s, num timesteps 712600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7765/0.2344,  Global eps mean/med/min/max eps rew: 31.205/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.24/92.69/92.69/131.83,
+	Losses:
+INFO:root:Time: 00d 00h 54m 33s, num timesteps 714000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7762/0.2328,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 54m 39s, num timesteps 715400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7794/0.2328,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 54m 45s, num timesteps 716800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7751/0.2328,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 54m 50s, num timesteps 718200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7770/0.2328,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 54m 56s, num timesteps 719600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7777/0.2363,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 55m 02s, num timesteps 721000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7770/0.2328,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 55m 08s, num timesteps 722400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7765/0.2328,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 55m 13s, num timesteps 723800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7763/0.2328,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 55m 19s, num timesteps 725200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7756/0.2325,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 55m 25s, num timesteps 726600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7756/0.2320,  Global eps mean/med/min/max eps rew: 31.187/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/93.28/93.28/132.91,
+	Losses:
+INFO:root:Time: 00d 00h 55m 37s, num timesteps 728000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7756/0.2320,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 55m 43s, num timesteps 729400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7763/0.2320,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 55m 48s, num timesteps 730800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7769/0.2320,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 55m 54s, num timesteps 732200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7778/0.2320,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 56m 00s, num timesteps 733600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7775/0.2320,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 56m 06s, num timesteps 735000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7769/0.2296,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 56m 11s, num timesteps 736400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7763/0.2270,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 56m 17s, num timesteps 737800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7756/0.2246,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 56m 23s, num timesteps 739200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7743/0.2184,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 56m 29s, num timesteps 740600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7743/0.2184,  Global eps mean/med/min/max eps rew: 31.181/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/93.21/93.21/132.41,
+	Losses:
+INFO:root:Time: 00d 00h 56m 41s, num timesteps 742000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7739/0.2158,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 56m 47s, num timesteps 743400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7746/0.2158,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 56m 52s, num timesteps 744800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7762/0.2158,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 56m 58s, num timesteps 746200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7757/0.2158,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 57m 04s, num timesteps 747600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7754/0.2158,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 57m 10s, num timesteps 749000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7752/0.2151,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 57m 15s, num timesteps 750400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7744/0.2151,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 57m 21s, num timesteps 751800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7751/0.2184,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 57m 27s, num timesteps 753200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7752/0.2184,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 57m 33s, num timesteps 754600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7753/0.2184,  Global eps mean/med/min/max eps rew: 31.154/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/92.75/92.75/131.79,
+	Losses:
+INFO:root:Time: 00d 00h 57m 46s, num timesteps 756000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7745/0.2151,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 57m 51s, num timesteps 757400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7737/0.2151,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 57m 57s, num timesteps 758800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7709/0.2151,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 03s, num timesteps 760200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7703/0.2151,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 08s, num timesteps 761600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7713/0.2212,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 14s, num timesteps 763000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7723/0.2232,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 20s, num timesteps 764400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7730/0.2246,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 26s, num timesteps 765800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7746/0.2270,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 32s, num timesteps 767200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7757/0.2296,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 38s, num timesteps 768600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7760/0.2320,  Global eps mean/med/min/max eps rew: 31.155/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/93.66/93.66/132.87,
+	Losses:
+INFO:root:Time: 00d 00h 58m 50s, num timesteps 770000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7765/0.2325,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 58m 56s, num timesteps 771400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7735/0.2325,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 02s, num timesteps 772800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7731/0.2325,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 07s, num timesteps 774200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7741/0.2325,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 13s, num timesteps 775600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7736/0.2320,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 19s, num timesteps 777000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7731/0.2296,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 24s, num timesteps 778400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7722/0.2261,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 30s, num timesteps 779800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7705/0.2245,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 36s, num timesteps 781200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7698/0.2232,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 42s, num timesteps 782600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7696/0.2232,  Global eps mean/med/min/max eps rew: 31.184/25.824/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.26/94.45/94.45/133.70,
+	Losses:
+INFO:root:Time: 00d 00h 59m 55s, num timesteps 784000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7695/0.2232,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 00s, num timesteps 785400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7687/0.2232,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 06s, num timesteps 786800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7685/0.2232,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 11s, num timesteps 788200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7680/0.2193,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 17s, num timesteps 789600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7678/0.2150,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 23s, num timesteps 791000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7651/0.2129,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 28s, num timesteps 792400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7641/0.2120,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 34s, num timesteps 793800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7641/0.2118,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 40s, num timesteps 795200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7646/0.2120,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 46s, num timesteps 796600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7647/0.2120,  Global eps mean/med/min/max eps rew: 31.116/25.823/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.23/94.16/94.16/133.23,
+	Losses:
+INFO:root:Time: 00d 01h 00m 59s, num timesteps 798000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7647/0.2120,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 04s, num timesteps 799400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7642/0.2120,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 10s, num timesteps 800800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7649/0.2120,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 15s, num timesteps 802200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7643/0.2120,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 21s, num timesteps 803600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7658/0.2122,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 27s, num timesteps 805000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7661/0.2122,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 33s, num timesteps 806400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7659/0.2120,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 39s, num timesteps 807800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7657/0.2118,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 45s, num timesteps 809200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7662/0.2120,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 01m 50s, num timesteps 810600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7667/0.2122,  Global eps mean/med/min/max eps rew: 31.069/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.25/94.67/94.67/133.94,
+	Losses:
+INFO:root:Time: 00d 01h 02m 03s, num timesteps 812000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7671/0.2122,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 09s, num timesteps 813400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7675/0.2122,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 15s, num timesteps 814800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7680/0.2122,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 20s, num timesteps 816200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7670/0.2129,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 26s, num timesteps 817600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7663/0.2120,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 32s, num timesteps 819000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7652/0.2118,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 38s, num timesteps 820400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7655/0.2118,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 44s, num timesteps 821800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7655/0.2118,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 50s, num timesteps 823200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7685/0.2142,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 02m 56s, num timesteps 824600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7697/0.2151,  Global eps mean/med/min/max eps rew: 31.063/25.819/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.73/95.73/135.75,
+	Losses:
+INFO:root:Time: 00d 01h 03m 09s, num timesteps 826000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7693/0.2150,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 14s, num timesteps 827400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7675/0.2150,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 20s, num timesteps 828800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7669/0.2150,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 25s, num timesteps 830200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7671/0.2150,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 31s, num timesteps 831600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7675/0.2151,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 37s, num timesteps 833000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7676/0.2157,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 43s, num timesteps 834400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7662/0.2149,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 49s, num timesteps 835800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7661/0.2149,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 03m 54s, num timesteps 837200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7664/0.2149,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 04m 00s, num timesteps 838600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7663/0.2149,  Global eps mean/med/min/max eps rew: 31.047/25.820/4.805/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/95.86/95.86/135.88,
+	Losses:
+INFO:root:Time: 00d 01h 04m 13s, num timesteps 840000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7670/0.2157,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 18s, num timesteps 841400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7687/0.2157,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 24s, num timesteps 842800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7695/0.2157,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 30s, num timesteps 844200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7706/0.2157,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 36s, num timesteps 845600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7709/0.2179,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 41s, num timesteps 847000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7695/0.2157,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 47s, num timesteps 848400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7701/0.2179,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 53s, num timesteps 849800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7697/0.2150,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 04m 59s, num timesteps 851200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7705/0.2208,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 05m 05s, num timesteps 852600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7707/0.2227,  Global eps mean/med/min/max eps rew: 31.026/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/95.60/95.60/135.40,
+	Losses:
+INFO:root:Time: 00d 01h 05m 17s, num timesteps 854000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7713/0.2239,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 05m 23s, num timesteps 855400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7721/0.2239,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 05m 29s, num timesteps 856800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7731/0.2239,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 05m 34s, num timesteps 858200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7732/0.2227,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 05m 40s, num timesteps 859600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7727/0.2179,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 05m 46s, num timesteps 861000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7722/0.2157,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 05m 52s, num timesteps 862400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7722/0.2179,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 05m 58s, num timesteps 863800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7708/0.2149,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 06m 03s, num timesteps 865200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7705/0.2142,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 06m 09s, num timesteps 866600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7704/0.2142,  Global eps mean/med/min/max eps rew: 31.058/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.28/95.67/95.67/135.38,
+	Losses:
+INFO:root:Time: 00d 01h 06m 22s, num timesteps 868000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7703/0.2142,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 06m 27s, num timesteps 869400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7726/0.2142,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 06m 33s, num timesteps 870800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7731/0.2142,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 06m 39s, num timesteps 872200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7712/0.2129,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 06m 44s, num timesteps 873600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7692/0.2129,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 06m 50s, num timesteps 875000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7696/0.2142,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 06m 56s, num timesteps 876400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7690/0.2129,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 07m 01s, num timesteps 877800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7691/0.2129,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 07m 07s, num timesteps 879200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7687/0.2122,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 07m 13s, num timesteps 880600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7684/0.2122,  Global eps mean/med/min/max eps rew: 31.068/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.49/95.49/134.87,
+	Losses:
+INFO:root:Time: 00d 01h 07m 26s, num timesteps 882000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7683/0.2122,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 07m 31s, num timesteps 883400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7679/0.2122,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 07m 37s, num timesteps 884800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7668/0.2122,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 07m 43s, num timesteps 886200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7656/0.2122,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 07m 48s, num timesteps 887600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7646/0.2120,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 07m 54s, num timesteps 889000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7632/0.2109,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 08m 00s, num timesteps 890400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7632/0.2109,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 08m 05s, num timesteps 891800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7637/0.2118,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 08m 11s, num timesteps 893200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7643/0.2118,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 08m 17s, num timesteps 894600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7644/0.2118,  Global eps mean/med/min/max eps rew: 31.071/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.32/95.32/135.23,
+	Losses:
+INFO:root:Time: 00d 01h 08m 30s, num timesteps 896000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7648/0.2120,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 08m 35s, num timesteps 897400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7617/0.2120,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 08m 41s, num timesteps 898800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7625/0.2120,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 08m 47s, num timesteps 900200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7642/0.2121,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 08m 52s, num timesteps 901600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7646/0.2121,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 08m 58s, num timesteps 903000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7655/0.2129,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 09m 04s, num timesteps 904400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7643/0.2120,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 09m 10s, num timesteps 905800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7644/0.2120,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 09m 16s, num timesteps 907200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7640/0.2118,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 09m 22s, num timesteps 908600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7641/0.2118,  Global eps mean/med/min/max eps rew: 30.998/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.27/95.73/95.73/135.67,
+	Losses:
+INFO:root:Time: 00d 01h 09m 34s, num timesteps 910000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7633/0.2096,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 09m 40s, num timesteps 911400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7606/0.2096,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 09m 46s, num timesteps 912800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7600/0.2096,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 09m 51s, num timesteps 914200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7593/0.2096,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 09m 57s, num timesteps 915600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7621/0.2109,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 10m 03s, num timesteps 917000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7642/0.2118,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 10m 09s, num timesteps 918400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7638/0.2118,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 10m 15s, num timesteps 919800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7631/0.2118,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 10m 21s, num timesteps 921200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7635/0.2118,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 10m 26s, num timesteps 922600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7637/0.2118,  Global eps mean/med/min/max eps rew: 30.984/25.820/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.04/96.04/136.00,
+	Losses:
+INFO:root:Time: 00d 01h 10m 39s, num timesteps 924000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7637/0.2118,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 10m 45s, num timesteps 925400, FPS 217,
+	Rewards: Global step mean/med rew: 0.7594/0.2118,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 10m 50s, num timesteps 926800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7627/0.2118,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 10m 56s, num timesteps 928200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7645/0.2120,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 11m 02s, num timesteps 929600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7647/0.2121,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 11m 08s, num timesteps 931000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7648/0.2121,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 11m 13s, num timesteps 932400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7650/0.2121,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 11m 19s, num timesteps 933800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7649/0.2121,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 11m 25s, num timesteps 935200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7642/0.2118,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 11m 31s, num timesteps 936600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7639/0.2110,  Global eps mean/med/min/max eps rew: 31.006/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.51/96.51/136.93,
+	Losses:
+INFO:root:Time: 00d 01h 11m 43s, num timesteps 938000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7637/0.2110,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 11m 49s, num timesteps 939400, FPS 217,
+	Rewards: Global step mean/med rew: 0.7610/0.2110,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 11m 54s, num timesteps 940800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7623/0.2110,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 00s, num timesteps 942200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7620/0.2110,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 06s, num timesteps 943600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7635/0.2110,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 12s, num timesteps 945000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7640/0.2118,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 17s, num timesteps 946400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7645/0.2120,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 23s, num timesteps 947800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7643/0.2120,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 29s, num timesteps 949200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7641/0.2118,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 35s, num timesteps 950600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7641/0.2118,  Global eps mean/med/min/max eps rew: 31.016/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.34/96.48/96.48/136.85,
+	Losses:
+INFO:root:Time: 00d 01h 12m 48s, num timesteps 952000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7643/0.2118,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 12m 53s, num timesteps 953400, FPS 217,
+	Rewards: Global step mean/med rew: 0.7611/0.2118,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 12m 59s, num timesteps 954800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7601/0.2118,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 05s, num timesteps 956200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7639/0.2121,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 10s, num timesteps 957600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7648/0.2121,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 16s, num timesteps 959000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7651/0.2121,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 22s, num timesteps 960400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7646/0.2121,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 28s, num timesteps 961800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7642/0.2120,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 34s, num timesteps 963200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7641/0.2120,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 40s, num timesteps 964600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7640/0.2120,  Global eps mean/med/min/max eps rew: 31.034/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.33/96.07/96.07/136.35,
+	Losses:
+INFO:root:Time: 00d 01h 13m 53s, num timesteps 966000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7633/0.2118,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 13m 58s, num timesteps 967400, FPS 217,
+	Rewards: Global step mean/med rew: 0.7640/0.2118,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 04s, num timesteps 968800, FPS 217,
+	Rewards: Global step mean/med rew: 0.7625/0.2118,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 10s, num timesteps 970200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7634/0.2120,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 15s, num timesteps 971600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7642/0.2122,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 21s, num timesteps 973000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7639/0.2122,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 27s, num timesteps 974400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7648/0.2143,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 33s, num timesteps 975800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7639/0.2129,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 39s, num timesteps 977200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7619/0.2120,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 44s, num timesteps 978600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7617/0.2120,  Global eps mean/med/min/max eps rew: 31.062/25.821/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.31/96.58/96.58/136.72,
+	Losses:
+INFO:root:Time: 00d 01h 14m 57s, num timesteps 980000, FPS 217,
+	Rewards: Global step mean/med rew: 0.7616/0.2120,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 03s, num timesteps 981400, FPS 217,
+	Rewards: Global step mean/med rew: 0.7592/0.2120,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 08s, num timesteps 982800, FPS 217,
+	Rewards: Global step mean/med rew: 0.7599/0.2120,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 14s, num timesteps 984200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7595/0.2120,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 20s, num timesteps 985600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7601/0.2120,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 25s, num timesteps 987000, FPS 218,
+	Rewards: Global step mean/med rew: 0.7613/0.2129,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 31s, num timesteps 988400, FPS 218,
+	Rewards: Global step mean/med rew: 0.7613/0.2129,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 37s, num timesteps 989800, FPS 218,
+	Rewards: Global step mean/med rew: 0.7618/0.2157,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 43s, num timesteps 991200, FPS 218,
+	Rewards: Global step mean/med rew: 0.7626/0.2179,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Time: 00d 01h 15m 49s, num timesteps 992600, FPS 218,
+	Rewards: Global step mean/med rew: 0.7635/0.2239,  Global eps mean/med/min/max eps rew: 31.043/25.822/1.272/94.910,
+	Dyn objects per eps events/contact/blocked/yield: 5.29/97.03/97.03/136.92,
+	Losses:
+INFO:root:Final Exp Area: 
+6.52057, 10.76996, 13.91059, 16.30604, 18.25194, 19.92773, 21.29395, 22.49321, 23.48884, 24.32382, 24.98079, 25.55068, 26.08959, 26.56000, 27.01943, 27.36894, 27.72848, 28.04209, 28.29511, 28.52662, 28.75073, 29.00334, 29.20268, 29.36901, 29.54121, 29.69548, 29.87414, 29.98116, 30.11666, 30.24497, 30.39082, 30.51195, 30.59337, 30.67302, 30.73266, 30.78760, 30.87516, 30.92820, 30.97513, 31.03667, 
+Final Exp Ratio: 
+0.22738, 0.37830, 0.48381, 0.56191, 0.62105, 0.66959, 0.70830, 0.74107, 0.76688, 0.78872, 0.80484, 0.81867, 0.83161, 0.84230, 0.85218, 0.85945, 0.86715, 0.87382, 0.87904, 0.88368, 0.88840, 0.89353, 0.89737, 0.90044, 0.90371, 0.90652, 0.90963, 0.91148, 0.91363, 0.91592, 0.91852, 0.92062, 0.92208, 0.92356, 0.92470, 0.92567, 0.92729, 0.92821, 0.92918, 0.93054, 
+Dyn objects (random, n=1, block=1, fov_only=0):
+  contact events/eps: 5.325
+  contact steps/eps:  97.492
+  blocked steps/eps:  97.492
+  object yields/eps:  138.307
+  collision-free eps: 14.9%
