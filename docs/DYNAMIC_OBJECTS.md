@@ -181,7 +181,7 @@ Perception summary at the end of `train.log` (evaluation only):
 | `frame detection rate` | share of steps with an object in view where at least 50 % of its cells were detected |
 | `steps in view/eps` | steps per episode with an object visible |
 | `ghost area/eps` | obstacle area (m²) in the agent's own map on the path objects have covered, where no object is now and the cell was not an obstacle before an object first passed. Mean over steps, and at the last step. With `-matrixManipulation` only, objects are never in the map, so this measures the method's false-positive level (walls first mapped after an object passed); compare rendered runs against it. |
-| `closest approach/eps` | mean over episodes of the smallest agent–object centre distance (m); contact is < 0.35 m |
+| `closest approach/eps` | mean over episodes of the smallest agent–object centre distance (m) where the agent's move took it, before a block undoes it; contact is < 0.35 m |
 
 `Final Exp Area` / `Final Exp Ratio` are the paper's metrics; the last
 number is the score after 1000 steps (paper: 32.701 m² / 0.948; our

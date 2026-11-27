@@ -352,8 +352,9 @@ class Exploration_Env(habitat.RLEnv):
                     dyn_stats['blocked'] = 1
                     # prev_contact stays True: repeated blocked attempts on
                     # consecutive steps count as one event, several steps
-            dyn_stats['min_dist'] = self.dyn.min_distance(
-                self._env.sim.get_agent_state().position)
+            # where the agent's move took it, before a block undoes it (after
+            # the undo, distance is never below the contact distance)
+            dyn_stats['min_dist'] = self.dyn.min_distance(post_pos)
             self._log_traj()
 
         # Preprocess observations
