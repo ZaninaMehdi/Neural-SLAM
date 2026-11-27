@@ -195,9 +195,37 @@ def get_args():
     parser.add_argument('--dyn_traj_dir', type=str,
                         default="~/scratch/ans_runs/dyn_trajectories",
                         help="cache for known-mode trajectories")
+    # How the objects reach the agent (at least one is required with
+    # --dyn_mode known/random; both together are allowed)
+    parser.add_argument('-matrixManipulation', '--matrixManipulation',
+                        action='store_true',
+                        help="""phantom objects: draw each object as a disk
+                                into copies of the obstacle map given to the
+                                planner and global policy (oracle
+                                perception, not rendered)""")
+    parser.add_argument('-withRendering', '--withRendering',
+                        action='store_true',
+                        help="""add each object to the habitat-sim scene as a
+                                box, so it appears in RGB and depth and must
+                                be perceived by the SLAM module""")
+    parser.add_argument('--dyn_log_traj', type=int, default=1,
+                        help="1: log agent and object positions every step "
+                             "to <dump>/dyn_traj/proc<rank>.jsonl")
+    parser.add_argument('--dyn_height', type=float, default=1.6,
+                        help="height (m) of rendered boxes (-withRendering); "
+                             "width and depth are 2 * dyn_radius")
 
     # parse arguments
     args = parser.parse_args()
+
+    if args.dyn_mode != "none" and not (args.matrixManipulation or
+                                        args.withRendering):
+        parser.error("--dyn_mode {} needs -matrixManipulation and/or "
+                     "-withRendering".format(args.dyn_mode))
+    if args.dyn_mode == "none" and (args.matrixManipulation or
+                                    args.withRendering):
+        parser.error("-matrixManipulation / -withRendering need "
+                     "--dyn_mode known or random")
     args.cuda = not args.no_cuda and torch.cuda.is_available()
 
     if args.cuda:

@@ -1,3 +1,4 @@
+import json
 import math
 import os
 import pickle
@@ -30,6 +31,7 @@ import env.habitat.utils.pose as pu
 import env.habitat.utils.visualizations as vu
 from env.habitat.utils.supervision import HabitatMaps
 from env.habitat.utils.dynamic_objects import DynamicObjects, rasterize
+from env.habitat.utils import dyn_render
 
 from model import get_grid
 
@@ -80,6 +82,15 @@ class Exploration_Env(habitat.RLEnv):
                 "CustomActionSpaceConfiguration"
         config_env.freeze()
 
+        # -withRendering: objects are added to habitat-sim as boxes, which
+        # needs physics enabled and the asset files present before the
+        # simulator is created (see env/habitat/utils/dyn_render.py)
+        self.dyn_render = None
+        if args.dyn_mode != "none" and args.withRendering:
+            dyn_render.write_physics_assets(2 * args.dyn_radius,
+                                            args.dyn_height)
+            dyn_render.enable_physics_in_habitat_api()
+            self.dyn_render = dyn_render.RenderedObjects(args.dyn_height)
 
         super().__init__(config_env, dataset)
 
@@ -100,10 +111,64 @@ class Exploration_Env(habitat.RLEnv):
         self.scene_name = None
         self.maps_dict = {}
 
-        # Phantom dynamic obstacles (see env/habitat/utils/dynamic_objects.py)
+        # Dynamic obstacles (see env/habitat/utils/dynamic_objects.py);
+        # -matrixManipulation / -withRendering choose how the agent gets them
         self.dyn = DynamicObjects(args, rank)
         self.dyn_rel = []
         self.dyn_last_step = self._empty_dyn_stats()
+        # Per-episode log of object (and agent) positions, see _log_traj()
+        self.dyn_traj = None
+        self.dyn_traj_file = None
+        if self.dyn.enabled and args.dyn_log_traj:
+            d = os.path.join("{}/dump/{}/".format(args.dump_location,
+                                                  args.exp_name), "dyn_traj")
+            os.makedirs(d, exist_ok=True)
+            self.dyn_traj_file = os.path.join(d, "proc{}.jsonl".format(rank))
+            open(self.dyn_traj_file, "w").close()  # one file per process
+
+    def _log_traj(self, start_episode=False):
+        """Append the current agent and object positions (habitat world x, z
+        in metres) to this episode's record; with start_episode=True first
+        write the previous episode as one JSON line."""
+        if self.dyn_traj_file is None:
+            return
+        if start_episode:
+            if self.dyn_traj is not None and self.dyn_traj['agent']:
+                with open(self.dyn_traj_file, "a") as f:
+                    f.write(json.dumps(self.dyn_traj) + "\n")
+            self.dyn_traj = {
+                'process': self.rank, 'episode_count': self.episode_no,
+                'scene': os.path.basename(self.habitat_env.sim.config.SCENE),
+                'episode_id': str(self._env.current_episode.episode_id),
+                'mode': self.args.dyn_mode, 'speed': self.args.dyn_speed,
+                'radius': self.args.dyn_radius,
+                'floor_y': [round(float(o.pos[1]), 3)
+                            for o in self.dyn.objects],
+                'agent': [], 'objects': []}
+        a = self._env.sim.get_agent_state().position
+        self.dyn_traj['agent'].append([round(float(a[0]), 3),
+                                       round(float(a[2]), 3)])
+        self.dyn_traj['objects'].append([[round(float(o.pos[0]), 3),
+                                          round(float(o.pos[2]), 3)]
+                                         for o in self.dyn.objects])
+
+    def _object_footprint(self, depth):
+        """Egocentric cells (same grid as fp_proj) where a rendered object is
+        seen: obstacle in the depth projection with the boxes, free without
+        them. Renders the frame once more with the boxes hidden.
+        Only for -withRendering during evaluation."""
+        sim = self._env.sim._sim
+        st = self._env.sim.get_agent_state()
+        self.dyn_render.hide(sim)
+        static_obs = self._env.sim.get_observations_at(
+            st.position, st.rotation, keep_agent_at_new_pose=True)
+        self.dyn_render.sync(sim, [o.pos for o in self.dyn.objects])
+        if static_obs is None:
+            return None
+        with_obj = self.mapper.project_obstacles(np.copy(depth))
+        static = self.mapper.project_obstacles(
+            _preprocess_depth(static_obs['depth']))
+        return with_obj & ~static
 
     @staticmethod
     def _empty_dyn_stats():
@@ -112,7 +177,9 @@ class Exploration_Env(habitat.RLEnv):
         # blocked: the move was undone because of the contact (--dyn_block 1)
         # yields:  number of objects that waited because they would have
         #          walked into the agent
-        return {'contact': 0, 'event': 0, 'blocked': 0, 'yields': 0}
+        # min_dist: closest agent-object centre distance (m) after the step
+        return {'contact': 0, 'event': 0, 'blocked': 0, 'yields': 0,
+                'min_dist': float('inf')}
 
     def randomize_env(self):
         self._env._episode_iterator._shuffle_iterator()
@@ -158,6 +225,24 @@ class Exploration_Env(habitat.RLEnv):
             self.explorable_map = self._get_gt_map(full_map_size)
         self.prev_explored_area = 0.
 
+        # Dynamic objects for the new episode
+        agent_state = self._env.sim.get_agent_state()
+        self.dyn.reset(self._env.sim._sim.pathfinder,
+                       agent_state.position,
+                       self.habitat_env.sim.config.SCENE,
+                       self._env.current_episode.episode_id)
+        if self.dyn_render is not None:
+            sim = self._env.sim._sim
+            self.dyn_render.reset(sim, len(self.dyn.objects))
+            self.dyn_render.sync(sim, [o.pos for o in self.dyn.objects])
+            # re-render the first frame with the boxes in place
+            new_obs = self._env.sim.get_observations_at(
+                agent_state.position, agent_state.rotation,
+                keep_agent_at_new_pose=True)
+            if new_obs is not None:
+                obs = new_obs
+        self._log_traj(start_episode=True)
+
         # Preprocess observations
         rgb = obs['rgb'].astype(np.uint8)
         self.obs = rgb # For visualization
@@ -193,11 +278,6 @@ class Exploration_Env(habitat.RLEnv):
         self.collison_map = np.zeros(self.map.shape)
         self.col_width = 1
 
-        # Dynamic objects for the new episode
-        self.dyn.reset(self._env.sim._sim.pathfinder,
-                       self._env.sim.get_agent_state().position,
-                       self.scene_name,
-                       self._env.current_episode.episode_id)
         self.dyn_rel = self.dyn.relative_positions(self.last_sim_location)
 
         # Set info
@@ -208,6 +288,9 @@ class Exploration_Env(habitat.RLEnv):
             'sensor_pose': [0., 0., 0.],
             'pose_err': [0., 0., 0.],
             'dyn_rel': self.dyn_rel,
+            'dyn_rel_all': self.dyn.relative_positions(
+                self.last_sim_location, fov_only=False),
+            'dyn_obj_fp': None,
             # VectorEnv auto-reset replaces the last step's info with this
             # one, so carry the previous episode's final-step stats over
             'dyn_step': self.dyn_last_step,
@@ -242,6 +325,9 @@ class Exploration_Env(habitat.RLEnv):
         pre_state = self._env.sim.get_agent_state()
         dyn_stats = self._empty_dyn_stats()
         dyn_stats['yields'] = self.dyn.step_objects(pre_state.position)
+        if self.dyn_render is not None:
+            self.dyn_render.sync(self._env.sim._sim,
+                                 [o.pos for o in self.dyn.objects])
 
         if args.noisy_actions:
             obs, rew, done, info = super().step(noisy_action)
@@ -266,6 +352,9 @@ class Exploration_Env(habitat.RLEnv):
                     dyn_stats['blocked'] = 1
                     # prev_contact stays True: repeated blocked attempts on
                     # consecutive steps count as one event, several steps
+            dyn_stats['min_dist'] = self.dyn.min_distance(
+                self._env.sim.get_agent_state().position)
+            self._log_traj()
 
         # Preprocess observations
         rgb = obs['rgb'].astype(np.uint8)
@@ -276,6 +365,9 @@ class Exploration_Env(habitat.RLEnv):
         state = rgb.transpose(2, 0, 1)
 
         depth = _preprocess_depth(obs['depth'])
+        obj_fp = None
+        if self.dyn_render is not None and args.eval:
+            obj_fp = self._object_footprint(depth)
 
         # Get base sensor and ground-truth pose
         dx_gt, dy_gt, do_gt = self.get_gt_pose_change()
@@ -344,6 +436,9 @@ class Exploration_Env(habitat.RLEnv):
         # was updated to the current pose by get_gt_pose_change above)
         self.dyn_rel = self.dyn.relative_positions(self.last_sim_location)
         self.info['dyn_rel'] = self.dyn_rel
+        self.info['dyn_rel_all'] = self.dyn.relative_positions(
+            self.last_sim_location, fov_only=False)
+        self.info['dyn_obj_fp'] = obj_fp
         self.info['dyn_step'] = dyn_stats
         self.dyn_last_step = dyn_stats
 
@@ -481,7 +576,7 @@ class Exploration_Env(habitat.RLEnv):
 
         # Dynamic objects drawn at their current offset from the agent's
         # estimated pose; a fresh matrix every call (never stored in the map)
-        if self.dyn.enabled:
+        if self.dyn.enabled and args.matrixManipulation:
             dyn_local = rasterize(self.dyn_rel, (start_x, start_y, start_o),
                                   grid.shape, (gx1, gy1),
                                   args.map_resolution, args.dyn_radius)

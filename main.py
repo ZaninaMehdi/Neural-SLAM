@@ -106,10 +106,22 @@ def main():
     # Dynamic-object contact stats per episode:
     # [contact events, contact steps, blocked steps, object yields]
     use_dyn = args.dyn_mode != "none"
+    # phantom disks in the global policy input only with -matrixManipulation
+    use_dyn_matrix = use_dyn and args.matrixManipulation
     dyn_ep = np.zeros((num_scenes, 4))
     dyn_episode_totals = deque(maxlen=1000)
     if args.eval and use_dyn:
         dyn_log = np.zeros((num_scenes, num_episodes, 4))
+        # Perception / map metrics per episode (see dyn_step_metrics):
+        # [object cells, detected object cells, steps with an object in view,
+        #  steps with >= 50% of its cells detected, ghost cells summed over
+        #  steps, ghost cells at the last scored step, number of scored
+        #  steps, closest agent-object distance (m)]
+        P_OBJ, P_DET, P_VIS, P_VIS_DET, P_GHOST_SUM, P_GHOST_LAST, P_STEPS, \
+            P_MIN_DIST = range(8)
+        percep_ep = np.zeros((num_scenes, 8))
+        percep_ep[:, P_MIN_DIST] = np.inf
+        percep_log = np.zeros((num_scenes, num_episodes, 8))
 
     g_episode_rewards = deque(maxlen=1000)
 
@@ -157,6 +169,13 @@ def main():
     # Local Map Boundaries
     lmb = np.zeros((num_scenes, 4)).astype(int)
 
+    if args.eval and use_dyn:
+        # Cells (full-map frame) that objects have covered this episode, and
+        # whether each was already an obstacle in the agent's map before an
+        # object first covered it (such cells are not counted as ghosts)
+        dyn_trail = np.zeros((num_scenes, full_w, full_h), dtype=bool)
+        dyn_pre = np.zeros((num_scenes, full_w, full_h), dtype=bool)
+
     ### Planner pose inputs has 7 dimensions
     ### 1-3 store continuous global agent location
     ### 4-7 store local map boundaries
@@ -165,7 +184,7 @@ def main():
     def overlay_dyn(infos, est_poses):
         # Max dynamic objects into the global policy input only (a copy of
         # local_map / full_map); the persistent maps are never touched.
-        if not use_dyn:
+        if not use_dyn_matrix:
             return
         for e in range(num_scenes):
             rel = infos[e]['dyn_rel']
@@ -181,6 +200,47 @@ def main():
                                            torch.from_numpy(dyn_l))
             global_input[e, 4] = torch.max(global_input[e, 4],
                                            torch.from_numpy(dyn_f))
+
+    def dyn_step_metrics(infos, proj_pred, prev_obst, obst):
+        """Per-step evaluation metrics for dynamic objects.
+        detection: of the egocentric cells where a rendered object is seen
+          in depth (infos 'dyn_obj_fp', -withRendering only), the share the
+          SLAM network's per-frame prediction (proj_pred) marks as obstacle.
+        ghosts: obstacle cells in the agent's own map (local_map ch 0) that
+          lie on the path objects have covered this episode, but not where
+          an object is now, and were not obstacles before an object first
+          covered them. Objects are placed from their true offset applied to
+          the estimated pose, like the -matrixManipulation overlay."""
+        res = args.map_resolution
+        for e in range(num_scenes):
+            st = infos[e]['dyn_step']
+            percep_ep[e, P_MIN_DIST] = min(percep_ep[e, P_MIN_DIST],
+                                           st['min_dist'])
+            m = infos[e]['dyn_obj_fp']
+            if m is not None and m.any():
+                det = (proj_pred[e] > 0.5) & m
+                percep_ep[e, P_OBJ] += m.sum()
+                percep_ep[e, P_DET] += det.sum()
+                percep_ep[e, P_VIS] += 1
+                percep_ep[e, P_VIS_DET] += det.sum() >= 0.5 * m.sum()
+
+            rel = infos[e]['dyn_rel_all']
+            r0, r1, c0, c1 = lmb[e]
+            pose = planner_pose_inputs[e, :3]
+            core = rasterize(rel, pose, (local_w, local_h), (r0, c0), res,
+                             args.dyn_radius) > 0
+            # box corners reach dyn_radius * sqrt(2); plus one cell margin
+            now = rasterize(rel, pose, (local_w, local_h), (r0, c0), res,
+                            args.dyn_radius * 1.42 + res / 100.) > 0
+            trail = dyn_trail[e, r0:r1, c0:c1]
+            pre = dyn_pre[e, r0:r1, c0:c1]
+            new = core & ~trail
+            pre[new] = prev_obst[e][new]
+            trail |= core
+            ghost = int((obst[e] & trail & ~now & ~pre).sum())
+            percep_ep[e, P_GHOST_SUM] += ghost
+            percep_ep[e, P_GHOST_LAST] = ghost
+            percep_ep[e, P_STEPS] += 1
 
     def init_map_and_pose():
         full_map.fill_(0.)
@@ -403,6 +463,17 @@ def main():
                 if step == args.max_episode_length - 1:
                     if args.eval:
                         dyn_log[:, ep_num] = dyn_ep
+                        # last step's infos come from the auto-reset (next
+                        # episode): keep only its carried-over min_dist
+                        for e in range(num_scenes):
+                            percep_ep[e, P_MIN_DIST] = min(
+                                percep_ep[e, P_MIN_DIST],
+                                infos[e]['dyn_step']['min_dist'])
+                        percep_log[:, ep_num] = percep_ep
+                        percep_ep.fill(0.)
+                        percep_ep[:, P_MIN_DIST] = np.inf
+                        dyn_trail.fill(False)
+                        dyn_pre.fill(False)
                     for e in range(num_scenes):
                         dyn_episode_totals.append(dyn_ep[e].copy())
                     dyn_ep.fill(0.)
@@ -443,12 +514,22 @@ def main():
                  in range(num_scenes)])
             ).float().to(device)
 
-            _, _, local_map[:, 0, :, :], local_map[:, 1, :, :], _, local_pose = \
-                nslam_module(last_obs, obs, poses, local_map[:, 0, :, :],
-                             local_map[:, 1, :, :], local_pose, build_maps=True)
+            score_dyn = args.eval and use_dyn and \
+                step != args.max_episode_length - 1
+            if score_dyn:
+                prev_obst = (local_map[:, 0] > 0.5).cpu().numpy()
+            proj_pred, _, local_map[:, 0, :, :], local_map[:, 1, :, :], _, \
+                local_pose = nslam_module(last_obs, obs, poses,
+                                          local_map[:, 0, :, :],
+                                          local_map[:, 1, :, :], local_pose,
+                                          build_maps=True)
 
             locs = local_pose.cpu().numpy()
             planner_pose_inputs[:, :3] = locs + origins
+            if score_dyn:
+                dyn_step_metrics(infos, proj_pred[:, 0].cpu().numpy(),
+                                 prev_obst,
+                                 (local_map[:, 0] > 0.5).cpu().numpy())
             local_map[:, 2, :, :].fill_(0.)  # Resetting current location channel
             for e in range(num_scenes):
                 r, c = locs[e, 1], locs[e, 0]
@@ -829,6 +910,44 @@ def main():
             log += "\n  object yields/eps:  {:.3f}".format(flat[:, 3].mean())
             log += "\n  collision-free eps: {:.1f}%".format(
                 100. * (flat[:, 0] == 0).mean())
+
+            cell_m2 = (args.map_resolution / 100.) ** 2
+            pl = percep_log.reshape(-1, 8)
+            steps = np.maximum(pl[:, P_STEPS], 1)
+            md = pl[:, P_MIN_DIST]
+            with open("{}/dyn_perception.txt".format(dump_dir), "w+") as f:
+                f.write("# process episode object_cells detected_cells "
+                        "steps_in_view steps_detected ghost_mean_m2 "
+                        "ghost_last_m2 min_dist_m\n")
+                for e in range(num_scenes):
+                    for i in range(num_episodes):
+                        r = percep_log[e, i]
+                        f.write("{} {} {:d} {:d} {:d} {:d} {:.4f} {:.4f} "
+                                "{:.3f}\n".format(
+                                    e, i, *r[:4].astype(int),
+                                    r[P_GHOST_SUM] / max(r[P_STEPS], 1)
+                                    * cell_m2,
+                                    r[P_GHOST_LAST] * cell_m2,
+                                    r[P_MIN_DIST]))
+            log += "\nDyn perception (matrix={}, rendering={}):".format(
+                args.matrixManipulation, args.withRendering)
+            if pl[:, P_OBJ].sum() > 0:
+                log += "\n  object cell recall:   {:.3f}".format(
+                    pl[:, P_DET].sum() / pl[:, P_OBJ].sum())
+                log += "\n  frame detection rate: {:.3f}".format(
+                    pl[:, P_VIS_DET].sum() / max(pl[:, P_VIS].sum(), 1))
+                log += "\n  steps in view/eps:    {:.1f}".format(
+                    pl[:, P_VIS].mean())
+            else:
+                log += "\n  detection: n/a (objects not rendered)"
+            log += "\n  ghost area/eps (mean over steps): {:.3f} m2".format(
+                (pl[:, P_GHOST_SUM] / steps).mean() * cell_m2)
+            log += "\n  ghost area/eps (last step):       {:.3f} m2".format(
+                pl[:, P_GHOST_LAST].mean() * cell_m2)
+            finite = np.isfinite(md)
+            if finite.any():
+                log += "\n  closest approach/eps: {:.3f} m".format(
+                    md[finite].mean())
 
         print(log)
         logging.info(log)

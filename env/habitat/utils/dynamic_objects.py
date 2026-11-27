@@ -1,11 +1,16 @@
-"""Phantom dynamic obstacles for oracle-perception experiments.
+"""Dynamic obstacles: trajectories, movement and contact checks.
 
-Objects are NOT rendered: they never appear in RGB/depth, so the SLAM module
-never perceives them. They exist only as
-  * positions on the scene navmesh, moved every environment step, and
-  * a `dyn_obs` matrix that is overlaid (element-wise max) on *copies* of the
-    obstacle map given to the planner and the global policy.
-The persistent SLAM map (local_map / full_map) is never modified.
+Objects are positions on the scene navmesh, moved every environment step.
+How the agent learns about them is chosen with two flags (either or both):
+  -matrixManipulation  phantom objects: a `dyn_obs` matrix is overlaid
+                       (element-wise max) on *copies* of the obstacle map given
+                       to the planner and the global policy. Not rendered; the
+                       persistent SLAM map (local_map / full_map) is never
+                       modified.
+  -withRendering       each object is also a box in the habitat-sim scene
+                       (env/habitat/utils/dyn_render.py), so it appears in RGB
+                       and depth and must be perceived by the SLAM module.
+Contact counting and blocking (--dyn_block) work the same in both.
 
 Modes (--dyn_mode):
   none    feature off (default, original ANS behaviour)
@@ -215,18 +220,28 @@ class DynamicObjects:
         return any(dist2d(o.pos, agent_pos) < self.contact_dist
                    for o in self.objects)
 
-    def relative_positions(self, agent_sim_pose):
+    def min_distance(self, agent_pos):
+        """Closest agent-object centre distance (m) now; inf if no objects."""
+        if not self.objects:
+            return float("inf")
+        return float(min(dist2d(o.pos, agent_pos) for o in self.objects))
+
+    def relative_positions(self, agent_sim_pose, fov_only=None):
         """Object offsets (dx forward, dy left) in metres relative to the
-        agent's true pose (x, y, o[rad]) from get_sim_location()."""
+        agent's true pose (x, y, o[rad]) from get_sim_location().
+        fov_only=None follows --dyn_fov_only; False returns every object
+        (used by the evaluation metrics)."""
         rel = []
         if not self.enabled:
             return rel
+        if fov_only is None:
+            fov_only = self.args.dyn_fov_only
         max_range = self.args.vision_range * self.args.map_resolution / 100.
         half_fov = np.deg2rad(self.args.hfov) / 2.
         for o in self.objects:
             ox, oy = sim_xy(o.pos)
             dx, dy, _ = pu.get_rel_pose_change((ox, oy, 0.), agent_sim_pose)
-            if self.args.dyn_fov_only:
+            if fov_only:
                 if np.hypot(dx, dy) > max_range or \
                         abs(np.arctan2(dy, dx)) > half_fov:
                     continue
