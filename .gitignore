@@ -138,3 +138,5 @@ dmypy.json
 *.sif
 logs/
 /tmp/
+# Slurm job scripts (cluster-specific; already-tracked ones stay tracked)
+*.sbatch
